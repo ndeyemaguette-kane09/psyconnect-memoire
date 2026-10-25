@@ -1,0 +1,158 @@
+{
+ "nodesep": 0.5,
+ "ranksep": 0.5,
+ "free": [
+  {
+   "name": "User",
+   "service": "auth-service",
+   "attrs": [
+    "- id : Long",
+    "- email : String",
+    "- password : String (haché)",
+    "- role : Role",
+    "- pseudo : String",
+    "- firstName, lastName : String",
+    "- enabled : boolean",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "PasswordResetCode",
+   "service": "auth-service",
+   "attrs": [
+    "- id : Long",
+    "- userId : Long",
+    "- codeHash : String",
+    "- expiresAt : LocalDateTime",
+    "- used : boolean",
+    "- attempts : int",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "UserProfile",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- authUserId : Long",
+    "- firstName, lastName : String",
+    "- phoneNumber : String",
+    "- gender : String",
+    "- dateOfBirth : LocalDate",
+    "- address, city, country : String",
+    "- profilePicture : String",
+    "- profileCompleted : Boolean",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "PatientProfile",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- authUserId : Long",
+    "- anonymousMode : Boolean",
+    "- emergencyContactName : String",
+    "- emergencyContactPhone : String",
+    "- preferredLanguage : String",
+    "- walletBalance : Double",
+    "- medicalHistory : String (texte libre)",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "PsychologistProfile",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- authUserId : Long",
+    "- specialty : String",
+    "- bio : String",
+    "- languages : String",
+    "- yearsOfExperience : Integer",
+    "- licenseNumber : String",
+    "- licenseDocumentPath : String",
+    "- consultationPrice : Integer",
+    "- address, city : String",
+    "- rating : Double",
+    "- totalReviews : int",
+    "- profileVerified : Boolean",
+    "- rejected : Boolean",
+    "- available : Boolean",
+    "- availableForEmergency : Boolean",
+    "- offersFreeSessions : Boolean",
+    "- licenseDocumentContentType : String",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "PsychologistAvailability",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- psychologistProfileId : Long",
+    "- dayOfWeek : Integer",
+    "- startHour, endHour : Integer",
+    "- slotDurationMinutes : Integer"
+   ]
+  }
+ ],
+ "edges": [
+  [
+   "User",
+   "UserProfile",
+   "refback",
+   "1",
+   "1"
+  ],
+  [
+   "User",
+   "PasswordResetCode",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "UserProfile",
+   "PsychologistProfile",
+   "assoc",
+   "1",
+   "0..1"
+  ],
+  [
+   "PasswordResetCode",
+   "PatientProfile",
+   "invis"
+  ],
+  [
+   "UserProfile",
+   "PatientProfile",
+   "assoc",
+   "1",
+   "0..1",
+   "",
+   "noconstraint"
+  ],
+  [
+   "PsychologistProfile",
+   "PsychologistAvailability",
+   "refback",
+   "1",
+   "0..*"
+  ]
+ ],
+ "ranks": [
+  [
+   "User",
+   "UserProfile"
+  ],
+  [
+   "PasswordResetCode",
+   "PsychologistProfile"
+  ],
+  [
+   "PatientProfile",
+   "PsychologistAvailability"
+  ]
+ ]
+}

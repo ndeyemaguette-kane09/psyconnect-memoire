@@ -1,0 +1,125 @@
+{
+ "actor": "Administrateur",
+ "columns": [
+  [
+   {
+    "title": "Comptes utilisateurs",
+    "items": [
+     "Consulter et rechercher\nles utilisateurs",
+     {
+      "label": "Activer ou désactiver\nun compte",
+      "actor": false
+     },
+     {
+      "label": "Réinitialiser le mot de\npasse d'un utilisateur",
+      "actor": false
+     },
+     {
+      "label": "Supprimer un compte",
+      "actor": false
+     }
+    ]
+   },
+   {
+    "title": "Paramètres",
+    "items": [
+     "Configurer le taux\nde commission",
+     "Diffuser une annonce"
+    ]
+   },
+   {
+    "title": "Validation des psychologues",
+    "items": [
+     "Valider ou refuser\nun psychologue",
+     {
+      "label": "Consulter le justificatif\nde licence",
+      "actor": false
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "title": "Supervision",
+    "items": [
+     "Consulter le\ntableau de bord",
+     "Consulter\nles statistiques",
+     {
+      "label": "Superviser\nles rendez-vous",
+      "actor": false
+     },
+     {
+      "label": "Superviser\nles paiements",
+      "actor": false
+     }
+    ]
+   },
+   {
+    "title": "Signalements et support",
+    "items": [
+     "Traiter un signalement",
+     {
+      "label": "Consulter la\npreuve jointe",
+      "actor": false
+     },
+     "Répondre à un message\nde support",
+     {
+      "label": "Marquer un message\ncomme résolu",
+      "actor": false
+     }
+    ]
+   }
+  ]
+ ],
+ "relations": [
+  {
+   "from": [
+    "Activer ou désactiver\nun compte",
+    "Réinitialiser le mot de\npasse d'un utilisateur",
+    "Supprimer un compte"
+   ],
+   "to": [
+    "Consulter et rechercher\nles utilisateurs"
+   ],
+   "kind": "extend"
+  },
+  {
+   "from": [
+    "Valider ou refuser\nun psychologue"
+   ],
+   "to": [
+    "Consulter le justificatif\nde licence"
+   ],
+   "kind": "include"
+  },
+  {
+   "from": [
+    "Superviser\nles rendez-vous",
+    "Superviser\nles paiements"
+   ],
+   "to": [
+    "Consulter\nles statistiques"
+   ],
+   "kind": "extend"
+  },
+  {
+   "from": [
+    "Consulter la\npreuve jointe"
+   ],
+   "to": [
+    "Traiter un signalement"
+   ],
+   "kind": "extend"
+  },
+  {
+   "from": [
+    "Marquer un message\ncomme résolu"
+   ],
+   "to": [
+    "Répondre à un message\nde support"
+   ],
+   "kind": "extend"
+  }
+ ],
+ "note": "Les deux bonshommes représentent le même acteur, dessiné deux fois\npour la lisibilité. Un psychologue sans justificatif ne peut pas\nêtre accepté."
+}

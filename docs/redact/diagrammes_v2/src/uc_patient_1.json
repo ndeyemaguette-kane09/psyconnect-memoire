@@ -1,0 +1,76 @@
+{
+ "actor": "Patient",
+ "width": 900,
+ "shift": -150,
+ "note": "Toutes ces fonctionnalités exigent d'être connecté, sauf S'inscrire,\nSe connecter et Réinitialiser son mot de passe.",
+ "groups": [
+  {
+   "title": "Compte et profil",
+   "items": [
+    "S'inscrire",
+    "Se connecter",
+    "Réinitialiser son mot de passe\n(code à 6 chiffres)",
+    "Modifier son profil",
+    "Activer le mode anonyme\n(pseudonyme visible du psy)",
+    "Renseigner ses antécédents\nmédicaux"
+   ]
+  },
+  {
+   "title": "Trouver un psychologue",
+   "items": [
+    "Chercher un psychologue",
+    "Voir les recommandations\npersonnalisées",
+    "Consulter le profil d'un psychologue"
+   ]
+  },
+  {
+   "title": "Rendez-vous et consultation",
+   "items": [
+    "Consulter ses rendez-vous",
+    "Réserver un rendez-vous\n(au moins 2 h à l'avance)",
+    "Reporter un rendez-vous",
+    "Annuler un rendez-vous",
+    {
+     "label": "Être remboursé sur son solde\n(annulation plus de 48 h avant)",
+     "actor": false
+    },
+    "Rejoindre la consultation vidéo\n(rendez-vous confirmé et payé)",
+    "Laisser un avis anonyme\n(après une séance terminée)"
+   ]
+  },
+  {
+   "title": "Aide immédiate (hors rendez-vous)",
+   "items": [
+    "Accéder à l'aide immédiate",
+    {
+     "label": "Appeler un psychologue disponible\n(gratuit, sans rendez-vous)",
+     "actor": false
+    },
+    {
+     "label": "Voir les numéros d'urgence\n(SAMU, Croix-Rouge)",
+     "actor": false
+    }
+   ]
+  }
+ ],
+ "relations": [
+  [
+   "Être remboursé sur son solde\n(annulation plus de 48 h avant)",
+   "Annuler un rendez-vous",
+   "extend",
+   70
+  ],
+  [
+   "Appeler un psychologue disponible\n(gratuit, sans rendez-vous)",
+   "Accéder à l'aide immédiate",
+   "extend",
+   70
+  ],
+  [
+   "Accéder à l'aide immédiate",
+   "Voir les numéros d'urgence\n(SAMU, Croix-Rouge)",
+   "include",
+   190
+  ]
+ ]
+}

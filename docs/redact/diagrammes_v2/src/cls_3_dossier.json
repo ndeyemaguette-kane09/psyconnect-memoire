@@ -1,0 +1,110 @@
+{
+ "nodesep": 0.3,
+ "ranksep": 0.5,
+ "free": [
+  {
+   "name": "PatientProfile",
+   "service": "user-service",
+   "stub": "attributs omis"
+  },
+  {
+   "name": "MedicalHistory",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- patientProfileId : Long",
+    "- allergies : String",
+    "- chronicConditions : String",
+    "- currentTreatments : String",
+    "- psychiatricHistory : String",
+    "- lastUpdatedByRole : String",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "JournalEntry",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- content : String",
+    "- moodRating : Integer",
+    "- createdAt : LocalDateTime",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "WalletTransaction",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- type : WalletTransactionType",
+    "- amount : Double",
+    "- balanceAfter : Double",
+    "- method : String",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "SupportMessage",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- senderProfileId : Long",
+    "- senderRole : SupportMessageSenderRole",
+    "- subject : String",
+    "- message : String",
+    "- status : SupportMessageStatus",
+    "- adminReply : String",
+    "- repliedAt : LocalDateTime",
+    "- createdAt : LocalDateTime",
+    "- adminNote : String",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "Broadcast",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- title : String",
+    "- message : String",
+    "- audience : String",
+    "- recipientCount : int",
+    "- sentAt : LocalDateTime"
+   ]
+  }
+ ],
+ "edges": [
+  [
+   "PatientProfile",
+   "MedicalHistory",
+   "refback",
+   "1",
+   "0..1"
+  ],
+  [
+   "PatientProfile",
+   "JournalEntry",
+   "assoc",
+   "1",
+   "0..*"
+  ],
+  [
+   "PatientProfile",
+   "WalletTransaction",
+   "assoc",
+   "1",
+   "0..*"
+  ],
+  [
+   "JournalEntry",
+   "SupportMessage",
+   "invis"
+  ],
+  [
+   "JournalEntry",
+   "Broadcast",
+   "invis"
+  ]
+ ]
+}

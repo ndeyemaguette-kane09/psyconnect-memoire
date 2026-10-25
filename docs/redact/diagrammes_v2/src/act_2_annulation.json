@@ -1,0 +1,180 @@
+{
+ "lanes": [
+  "Patient",
+  "appointment-service",
+  "payment-service"
+ ],
+ "nodes": [
+  {
+   "id": "s",
+   "type": "start",
+   "lane": 0,
+   "row": 0
+  },
+  {
+   "id": "a1",
+   "type": "action",
+   "lane": 0,
+   "row": 1,
+   "text": "Ouvrir un rendez-vous en attente ou confirmé, à venir"
+  },
+  {
+   "id": "a2",
+   "type": "action",
+   "lane": 0,
+   "row": 2.1,
+   "text": "Demander l'annulation"
+  },
+  {
+   "id": "a3",
+   "type": "action",
+   "lane": 1,
+   "row": 3.1,
+   "text": "Vérifier que c'est son rendez-vous"
+  },
+  {
+   "id": "a4",
+   "type": "action",
+   "lane": 1,
+   "row": 4.1,
+   "text": "Passer le RDV en ANNULÉ"
+  },
+  {
+   "id": "d1",
+   "type": "decision",
+   "lane": 1,
+   "row": 5.2,
+   "text": "Annulé 48 h avant ou plus ?"
+  },
+  {
+   "id": "b1",
+   "type": "action",
+   "lane": 2,
+   "row": 6.4,
+   "text": "Rechercher les paiements réussis du RDV"
+  },
+  {
+   "id": "d2",
+   "type": "decision",
+   "lane": 2,
+   "row": 7.6,
+   "text": "RDV déjà payé ?"
+  },
+  {
+   "id": "b2",
+   "type": "action",
+   "lane": 2,
+   "row": 8.9,
+   "text": "Créditer le solde du patient, paiement → REMBOURSÉ"
+  },
+  {
+   "id": "m",
+   "type": "merge",
+   "lane": 1,
+   "row": 10.1
+  },
+  {
+   "id": "a5",
+   "type": "action",
+   "lane": 1,
+   "row": 11.1,
+   "text": "Notifier le patient (remboursé ou non) et le psychologue"
+  },
+  {
+   "id": "a6",
+   "type": "action",
+   "lane": 0,
+   "row": 12.2,
+   "text": "Consulter la notification et son solde"
+  },
+  {
+   "id": "f",
+   "type": "end",
+   "lane": 0,
+   "row": 13.2
+  }
+ ],
+ "edges": [
+  {
+   "from": "s",
+   "to": "a1"
+  },
+  {
+   "from": "a1",
+   "to": "a2"
+  },
+  {
+   "from": "a2",
+   "to": "a3"
+  },
+  {
+   "from": "a3",
+   "to": "a4"
+  },
+  {
+   "from": "a4",
+   "to": "d1"
+  },
+  {
+   "from": "d1",
+   "to": "b1",
+   "label": "oui",
+   "out": "right"
+  },
+  {
+   "from": "d1",
+   "to": "m",
+   "label": "non"
+  },
+  {
+   "from": "b1",
+   "to": "d2"
+  },
+  {
+   "from": "d2",
+   "to": "b2",
+   "label": "oui"
+  },
+  {
+   "from": "d2",
+   "to": "m",
+   "label": "non",
+   "out": "left",
+   "in": "right",
+   "path": [
+    [
+     "tx+150",
+     null
+    ],
+    [
+     null,
+     "ty"
+    ]
+   ]
+  },
+  {
+   "from": "b2",
+   "to": "m",
+   "out": "bottom",
+   "in": "right",
+   "path": [
+    [
+     null,
+     "ty"
+    ]
+   ]
+  },
+  {
+   "from": "m",
+   "to": "a5"
+  },
+  {
+   "from": "a5",
+   "to": "a6"
+  },
+  {
+   "from": "a6",
+   "to": "f"
+  }
+ ]
+}

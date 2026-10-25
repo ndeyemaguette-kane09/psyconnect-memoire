@@ -1,0 +1,136 @@
+{
+ "rankdir": "LR",
+ "nodesep": 0.3,
+ "ranksep": 0.55,
+ "free": [
+  {
+   "name": "PatientProfile",
+   "service": "user-service",
+   "stub": "attributs omis"
+  },
+  {
+   "name": "PsyPatientLink",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- psychologistProfileId : Long",
+    "- patientProfileId : Long",
+    "- linkedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "ClinicalNote",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- patientProfileId : Long",
+    "- psychologistProfileId : Long",
+    "- appointmentId : Long",
+    "- content : String",
+    "- createdAt : LocalDateTime",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "Review",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- patientProfileId : Long",
+    "- psychologistProfileId : Long",
+    "- rating : Integer (1 à 5)",
+    "- comment : String",
+    "- createdAt : LocalDateTime",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "PsychologistReport",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- patientProfileId : Long",
+    "- psychologistProfileId : Long",
+    "- reason : ReportReason",
+    "- description : String",
+    "- evidenceFilename : String",
+    "- status : ReportStatus",
+    "- adminNote : String",
+    "- createdAt : LocalDateTime",
+    "- evidenceExtension : String",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "PsychologistProfile",
+   "service": "user-service",
+   "stub": "attributs omis"
+  }
+ ],
+ "edges": [
+  [
+   "PatientProfile",
+   "PsyPatientLink",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsyPatientLink",
+   "PsychologistProfile",
+   "ref",
+   "0..*",
+   "1"
+  ],
+  [
+   "PatientProfile",
+   "ClinicalNote",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "ClinicalNote",
+   "PsychologistProfile",
+   "ref",
+   "0..*",
+   "1"
+  ],
+  [
+   "PatientProfile",
+   "Review",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "Review",
+   "PsychologistProfile",
+   "ref",
+   "0..*",
+   "1"
+  ],
+  [
+   "PatientProfile",
+   "PsychologistReport",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistReport",
+   "PsychologistProfile",
+   "ref",
+   "0..*",
+   "1"
+  ]
+ ],
+ "ranks": [
+  [
+   "PsyPatientLink",
+   "ClinicalNote",
+   "Review",
+   "PsychologistReport"
+  ]
+ ]
+}

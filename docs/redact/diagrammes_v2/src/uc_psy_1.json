@@ -1,0 +1,54 @@
+{
+ "actor": "Psychologue",
+ "note": "Le profil n'est visible des patients qu'après validation du justificatif.\nTout exige d'être connecté, sauf l'inscription et la connexion.",
+ "groups": [
+  {
+   "title": "Compte et profil",
+   "items": [
+    "S'inscrire",
+    {
+     "label": "Joindre son justificatif\nde licence",
+     "actor": false
+    },
+    "Se connecter",
+    "Réinitialiser son mot de passe\n(code à 6 chiffres)",
+    "Modifier son profil professionnel",
+    "Définir ses disponibilités récurrentes"
+   ]
+  },
+  {
+   "title": "Rendez-vous et consultation",
+   "items": [
+    "Consulter son agenda",
+    "Accepter ou refuser une demande\n(au moins 2 h avant la séance)",
+    "Mener la consultation vidéo",
+    {
+     "label": "Donner des recommandations\naprès la séance",
+     "actor": false
+    }
+   ]
+  },
+  {
+   "title": "Aide immédiate",
+   "items": [
+    "Se déclarer disponible\npour l'aide immédiate"
+   ]
+  }
+ ],
+ "width": 860,
+ "shift": -160,
+ "relations": [
+  [
+   "S'inscrire",
+   "Joindre son justificatif\nde licence",
+   "include",
+   70
+  ],
+  [
+   "Donner des recommandations\naprès la séance",
+   "Mener la consultation vidéo",
+   "extend",
+   70
+  ]
+ ]
+}

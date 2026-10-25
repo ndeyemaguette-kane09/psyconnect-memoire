@@ -1,0 +1,126 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Architecture technique" id="5zwhASZKhO_lvvmLGMS5">
+    <mxGraphModel dx="802" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-1" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#F0F5FC;strokeColor=#7887A0;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=15;fontColor=#192D5F;" value="Smartphone (iOS / Android)" vertex="1">
+          <mxGeometry height="125" width="590" x="15" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-2" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#F7FAFD;strokeColor=#7887A0;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=15;fontColor=#192D5F;" value="Serveur — Docker Compose" vertex="1">
+          <mxGeometry height="420" width="867.5" x="15" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-3" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#FAFCFA;strokeColor=#7887A0;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=15;fontColor=#192D5F;" value="Organisation interne d&#39;un service Spring Boot" vertex="1">
+          <mxGeometry height="310" width="505" x="15" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-4" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#E2EDFA;strokeColor=#192D5F;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;Application Flutter (Dart)&lt;/b&gt;&lt;br&gt;Provider (gestion d&amp;#x27;état) · http (REST / JSON)&lt;br&gt;Jitsi Meet SDK (vidéo) · jeton JWT conservé sur l&amp;#x27;appareil" vertex="1">
+          <mxGeometry height="82.5" width="560" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-5" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6E6E6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;Serveur Jitsi public&lt;/b&gt;&lt;br&gt;meet.ffmuc.net&lt;br&gt;salons vidéo (WebRTC)" vertex="1">
+          <mxGeometry height="85" width="237.5" x="690" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-6" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFAEB;strokeColor=#967828;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;api-gateway  (8080)&lt;/b&gt;&lt;br&gt;Spring Cloud Gateway — route vers le bon service" vertex="1">
+          <mxGeometry height="70" width="410" x="30" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-7" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFAEB;strokeColor=#967828;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;eureka-server  (8761)&lt;/b&gt;&lt;br&gt;Spring Cloud Netflix Eureka" vertex="1">
+          <mxGeometry height="70" width="165" x="495" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-8" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFAEB;strokeColor=#967828;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;zipkin  (9411)&lt;/b&gt;&lt;br&gt;traces Micrometer Tracing" vertex="1">
+          <mxGeometry height="70" width="165" x="701" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-9" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#E2F2F0;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;auth-service&lt;/b&gt;&lt;br&gt;port 8081" vertex="1">
+          <mxGeometry height="65" width="110" x="30" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-10" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#E2F2F0;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;user-service&lt;/b&gt;&lt;br&gt;port 8082" vertex="1">
+          <mxGeometry height="65" width="110" x="151" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-11" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#E2F2F0;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;appointment-service&lt;/b&gt;&lt;br&gt;port 8083" vertex="1">
+          <mxGeometry height="65" width="110" x="272" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-12" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#E2F2F0;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;session-service&lt;/b&gt;&lt;br&gt;port 8089" vertex="1">
+          <mxGeometry height="65" width="110" x="393" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-13" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#E2F2F0;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;payment-service&lt;/b&gt;&lt;br&gt;port 8085" vertex="1">
+          <mxGeometry height="65" width="110" x="514" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-14" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#E2F2F0;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;notification-service&lt;/b&gt;&lt;br&gt;port 8086" vertex="1">
+          <mxGeometry height="65" width="110" x="635" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-15" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#E2F2F0;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;ai-companion-service&lt;/b&gt;&lt;br&gt;port 8087" vertex="1">
+          <mxGeometry height="65" width="110" x="756" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-16" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#E2F2F0;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;Socle commun des 7 microservices Java (nom-service)&lt;/b&gt;&lt;br&gt;Spring Boot 3.5 · Java 17 · Spring Security (filtre JWT) · Spring Data JPA / Hibernate · Resilience4j · Micrometer Tracing" vertex="1">
+          <mxGeometry height="47.5" width="630" x="30" y="407.5" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-17" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ECF0FC;strokeColor=#3C4696;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;ml-service  (8000)&lt;/b&gt;&lt;br&gt;Python 3 · FastAPI · NumPy&lt;br&gt;(TF-IDF, similarité cosinus)" vertex="1">
+          <mxGeometry height="75" width="260" x="30" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-18" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6E6E6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;mailpit  (1025 / 8025)&lt;/b&gt;&lt;br&gt;serveur SMTP de développement" vertex="1">
+          <mxGeometry height="75" width="210" x="304" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-19" parent="1" style="shape=cylinder3;boundedLbl=1;size=10;whiteSpace=wrap;html=1;fillColor=#F0F0F0;strokeColor=#505050;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;postgres  (5434)&lt;/b&gt;&lt;br&gt;PostgreSQL 16 — 6 bases :&lt;br&gt;auth, user, appointment, session,&lt;br&gt;payment, notification" vertex="1">
+          <mxGeometry height="100" width="192.5" x="650" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-20" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6E6E6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;Ollama sur la machine hôte  (11434)&lt;/b&gt;&lt;br&gt;modèle qwen2.5:3b, appelé par Spring AI" vertex="1">
+          <mxGeometry height="70" width="237.5" x="605" y="628.5" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-21" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;controller&lt;/b&gt;&lt;br&gt;points d&amp;#x27;accès REST, DTO" vertex="1">
+          <mxGeometry height="46" width="210" x="45" y="652.5" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-22" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;service&lt;/b&gt;&lt;br&gt;règles métier" vertex="1">
+          <mxGeometry height="46" width="210" x="45" y="726" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-23" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;repository&lt;/b&gt;&lt;br&gt;Spring Data JPA" vertex="1">
+          <mxGeometry height="46" width="210" x="45" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-24" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;entity&lt;/b&gt;&lt;br&gt;classes JPA ↔ tables" vertex="1">
+          <mxGeometry height="46" width="210" x="45" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-25" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;security&lt;/b&gt;&lt;br&gt;filtre JWT" vertex="1">
+          <mxGeometry height="46" width="165" x="340" y="652.5" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-26" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#005C6E;strokeWidth=2;fontSize=11;verticalAlign=top;" value="&lt;b style=&#39;font-size:14px&#39;&gt;client&lt;/b&gt;&lt;br&gt;appels REST&lt;br&gt;+ Resilience4j" vertex="1">
+          <mxGeometry height="60" width="165" x="340" y="711.5" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-27" edge="1" parent="1" source="DjmIiM6vkjh0yQLR3Y1_-4" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;fontStyle=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="DjmIiM6vkjh0yQLR3Y1_-6" value="HTTPS · REST/JSON · Bearer JWT">
+          <mxGeometry relative="1" x="-0.6901" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-28" edge="1" parent="1" source="DjmIiM6vkjh0yQLR3Y1_-4" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;fontStyle=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="DjmIiM6vkjh0yQLR3Y1_-5" value="WebRTC">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-29" edge="1" parent="1" source="DjmIiM6vkjh0yQLR3Y1_-6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;fontStyle=1;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;" target="DjmIiM6vkjh0yQLR3Y1_-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-30" edge="1" parent="1" source="DjmIiM6vkjh0yQLR3Y1_-6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;fontStyle=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="DjmIiM6vkjh0yQLR3Y1_-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-31" edge="1" parent="1" source="DjmIiM6vkjh0yQLR3Y1_-15" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;fontStyle=1;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;" target="DjmIiM6vkjh0yQLR3Y1_-20" value="HTTP (Spring AI)">
+          <mxGeometry relative="1" x="0.4926" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="930" y="362.5" />
+              <mxPoint x="930" y="655" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-32" edge="1" parent="1" source="DjmIiM6vkjh0yQLR3Y1_-16" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;fontStyle=1;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;" target="DjmIiM6vkjh0yQLR3Y1_-19" value="JDBC">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-33" edge="1" parent="1" source="DjmIiM6vkjh0yQLR3Y1_-21" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;fontStyle=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="DjmIiM6vkjh0yQLR3Y1_-22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-34" edge="1" parent="1" source="DjmIiM6vkjh0yQLR3Y1_-22" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;fontStyle=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="DjmIiM6vkjh0yQLR3Y1_-23" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-35" edge="1" parent="1" source="DjmIiM6vkjh0yQLR3Y1_-23" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;fontStyle=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="DjmIiM6vkjh0yQLR3Y1_-24" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DjmIiM6vkjh0yQLR3Y1_-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCEE;strokeColor=#7887A0;align=left;spacingLeft=8;fontSize=12;" value="• Chaque service s&#39;enregistre auprès d&#39;Eureka et envoie ses traces à Zipkin.&lt;br&gt;• Les 7 services Java partagent le même socle technique.&lt;br&gt;• ai-companion-service et ml-service n&#39;ont pas de base." vertex="1">
+          <mxGeometry height="100" width="352" x="530" y="710" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,108 @@
+{
+ "participants": [
+  {
+   "id": "pat",
+   "label": "App patient"
+  },
+  {
+   "id": "psy",
+   "label": "App psy"
+  },
+  {
+   "id": "gw",
+   "label": "API Gateway"
+  },
+  {
+   "id": "appt",
+   "label": "appointment-",
+   "sub": "service"
+  },
+  {
+   "id": "user",
+   "label": "user-service"
+  },
+  {
+   "id": "notif",
+   "label": "notification-",
+   "sub": "service"
+  }
+ ],
+ "steps": [
+  {
+   "t": "msg",
+   "from": "pat",
+   "to": "gw",
+   "text": "POST /appointments (psy, créneau, type)"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "appt",
+   "text": "transmet la requête"
+  },
+  {
+   "t": "msg",
+   "from": "appt",
+   "to": "user",
+   "text": "identifie le patient, vérifie que le psy est approuvé"
+  },
+  {
+   "t": "ret",
+   "from": "user",
+   "to": "appt",
+   "text": "patientId, psy approuvé"
+  },
+  {
+   "t": "self",
+   "p": "appt",
+   "text": "créneau futur et libre ? enregistre le RDV (PENDING)"
+  },
+  {
+   "t": "msg",
+   "from": "appt",
+   "to": "notif",
+   "text": "notifie le patient et le psychologue"
+  },
+  {
+   "t": "ret",
+   "from": "appt",
+   "to": "pat",
+   "text": "RDV en attente de confirmation"
+  },
+  {
+   "t": "msg",
+   "from": "psy",
+   "to": "gw",
+   "text": "PUT /appointments/{id}/status ?status=CONFIRMED"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "appt",
+   "text": "transmet la requête"
+  },
+  {
+   "t": "self",
+   "p": "appt",
+   "text": "son RDV, en attente et à venir ? passe en CONFIRMED"
+  },
+  {
+   "t": "msg",
+   "from": "appt",
+   "to": "notif",
+   "text": "notifie le patient"
+  },
+  {
+   "t": "ret",
+   "from": "appt",
+   "to": "psy",
+   "text": "RDV confirmé"
+  },
+  {
+   "t": "note",
+   "from": "pat",
+   "to": "gw",
+   "text": "Le patient peut ensuite payer le rendez-vous confirmé (voir diagramme suivant)."
+  }
+ ]
+}

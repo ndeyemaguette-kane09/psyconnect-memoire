@@ -1,0 +1,237 @@
+{
+ "rankdir": "LR",
+ "nodesep": 0.3,
+ "ranksep": 0.6,
+ "free": [
+  {
+   "name": "PatientProfile",
+   "service": "user-service",
+   "stub": "attributs : voir figure précédente"
+  },
+  {
+   "name": "PsychologistProfile",
+   "service": "user-service",
+   "stub": "attributs : voir figure précédente"
+  },
+  {
+   "name": "MedicalHistory",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- patientProfileId : Long",
+    "- allergies : String",
+    "- chronicConditions : String",
+    "- currentTreatments : String",
+    "- psychiatricHistory : String",
+    "- lastUpdatedByRole : String",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "JournalEntry",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- content : String",
+    "- moodRating : Integer",
+    "- createdAt, updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "WalletTransaction",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- type : WalletTransactionType",
+    "- amount : Double",
+    "- balanceAfter : Double",
+    "- method : String",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "ClinicalNote",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- patientProfileId : Long",
+    "- psychologistProfileId : Long",
+    "- appointmentId : Long",
+    "- content : String",
+    "- createdAt, updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "PsyPatientLink",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- psychologistProfileId : Long",
+    "- patientProfileId : Long",
+    "- linkedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "Review",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- patientProfileId : Long",
+    "- psychologistProfileId : Long",
+    "- rating : Integer (1 à 5)",
+    "- comment : String",
+    "- createdAt : LocalDateTime",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "PsychologistReport",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- patientProfileId : Long",
+    "- psychologistProfileId : Long",
+    "- reason : ReportReason",
+    "- description : String",
+    "- evidenceFilename : String",
+    "- status : ReportStatus",
+    "- adminNote : String",
+    "- createdAt : LocalDateTime",
+    "- evidenceExtension : String",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "SupportMessage",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- senderProfileId : Long",
+    "- senderRole : SupportMessageSenderRole",
+    "- subject : String",
+    "- message : String",
+    "- status : SupportMessageStatus",
+    "- adminReply : String",
+    "- repliedAt : LocalDateTime",
+    "- createdAt : LocalDateTime",
+    "- adminNote : String",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "Broadcast",
+   "service": "user-service",
+   "attrs": [
+    "- id : Long",
+    "- title : String",
+    "- message : String",
+    "- audience : String",
+    "- recipientCount : int",
+    "- sentAt : LocalDateTime"
+   ]
+  }
+ ],
+ "edges": [
+  [
+   "MedicalHistory",
+   "PatientProfile",
+   "ref",
+   "0..1",
+   "1"
+  ],
+  [
+   "JournalEntry",
+   "PatientProfile",
+   "assoc",
+   "0..*",
+   "1"
+  ],
+  [
+   "WalletTransaction",
+   "PatientProfile",
+   "assoc",
+   "0..*",
+   "1"
+  ],
+  [
+   "PatientProfile",
+   "ClinicalNote",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistProfile",
+   "ClinicalNote",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PatientProfile",
+   "PsyPatientLink",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistProfile",
+   "PsyPatientLink",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PatientProfile",
+   "Review",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistProfile",
+   "Review",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PatientProfile",
+   "PsychologistReport",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistProfile",
+   "PsychologistReport",
+   "refback",
+   "1",
+   "0..*"
+  ]
+ ],
+ "ranks": [
+  [
+   "MedicalHistory",
+   "JournalEntry",
+   "WalletTransaction"
+  ],
+  [
+   "PatientProfile",
+   "PsychologistProfile",
+   "SupportMessage",
+   "Broadcast"
+  ],
+  [
+   "ClinicalNote",
+   "PsyPatientLink",
+   "Review",
+   "PsychologistReport"
+  ]
+ ],
+ "legend": [
+  "Trait plein : association JPA. Trait pointillé avec flèche : référence par identifiant,",
+  "la flèche pointe vers la classe référencée. SupportMessage et Broadcast sont",
+  "indépendantes : l'expéditeur est identifié par senderProfileId et senderRole."
+ ]
+}

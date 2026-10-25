@@ -1,0 +1,167 @@
+{
+ "actor": "Patient",
+ "columns": [
+  [
+   {
+    "title": "Compte et profil",
+    "items": [
+     "S'inscrire",
+     "Se connecter",
+     {
+      "label": "Réinitialiser son\nmot de passe",
+      "actor": false
+     },
+     "Modifier son profil",
+     "Renseigner ses\nantécédents médicaux",
+     "Activer le mode anonyme\n(pseudonyme visible du psy)",
+     "Régler ses préférences\nde notification"
+    ]
+   },
+   {
+    "title": "Trouver un psychologue",
+    "items": [
+     "Chercher un psychologue\n(spécialité, langue, ville)",
+     "Voir les recommandations\npersonnalisées",
+     {
+      "label": "Consulter le profil\nd'un psychologue",
+      "actor": false
+     }
+    ]
+   },
+   {
+    "title": "Rendez-vous",
+    "items": [
+     "Réserver un rendez-vous\n(au moins 2 h à l'avance)",
+     "Consulter ses rendez-vous",
+     {
+      "label": "Reporter un rendez-vous",
+      "actor": false
+     },
+     {
+      "label": "Annuler un rendez-vous",
+      "actor": false
+     },
+     {
+      "label": "Être remboursé sur son solde\n(plus de 48 h avant)",
+      "actor": false
+     },
+     "Rejoindre la consultation\nvidéo (confirmé et payé)",
+     "Laisser un avis anonyme\n(après une séance terminée)"
+    ]
+   }
+  ],
+  [
+   {
+    "title": "Paiement et solde",
+    "items": [
+     "Payer un rendez-vous\ndepuis son solde",
+     "Recharger son solde\n(Wave, Orange Money)",
+     "Retirer son solde",
+     "Consulter l'historique\ndes mouvements"
+    ]
+   },
+   {
+    "title": "Suivi personnel",
+    "items": [
+     "Tenir un journal d'humeur",
+     "Répondre à un questionnaire\nPHQ-9 / GAD-7",
+     "Consulter l'historique\nde ses scores",
+     "Suivre les recommandations\nreçues après une séance",
+     "Discuter avec\nle compagnon Xalaat"
+    ]
+   },
+   {
+    "title": "Communication",
+    "items": [
+     "Échanger des messages\navec son psychologue",
+     "Consulter ses notifications",
+     "Lire les annonces\nde la plateforme",
+     "Contacter l'administrateur",
+     "Signaler un psychologue"
+    ]
+   },
+   {
+    "title": "Aide immédiate (hors rendez-vous)",
+    "items": [
+     {
+      "label": "Voir les numéros d'urgence\n(SAMU, Croix-Rouge)",
+      "actor": false
+     },
+     "Accéder à l'aide immédiate",
+     {
+      "label": "Appeler un psychologue\ndisponible (gratuit)",
+      "actor": false
+     }
+    ]
+   }
+  ]
+ ],
+ "relations": [
+  {
+   "from": [
+    "Réinitialiser son\nmot de passe"
+   ],
+   "to": [
+    "Se connecter"
+   ],
+   "kind": "extend"
+  },
+  {
+   "from": [
+    "Consulter le profil\nd'un psychologue"
+   ],
+   "to": [
+    "Chercher un psychologue\n(spécialité, langue, ville)",
+    "Voir les recommandations\npersonnalisées"
+   ],
+   "kind": "extend"
+  },
+  {
+   "from": [
+    "Reporter un rendez-vous",
+    "Annuler un rendez-vous"
+   ],
+   "to": [
+    "Consulter ses rendez-vous"
+   ],
+   "kind": "extend"
+  },
+  {
+   "from": [
+    "Être remboursé sur son solde\n(plus de 48 h avant)"
+   ],
+   "to": [
+    "Annuler un rendez-vous"
+   ],
+   "kind": "extend"
+  },
+  {
+   "from": [
+    "Recharger son solde\n(Wave, Orange Money)"
+   ],
+   "to": [
+    "Payer un rendez-vous\ndepuis son solde"
+   ],
+   "kind": "extend"
+  },
+  {
+   "from": [
+    "Accéder à l'aide immédiate"
+   ],
+   "to": [
+    "Voir les numéros d'urgence\n(SAMU, Croix-Rouge)"
+   ],
+   "kind": "include"
+  },
+  {
+   "from": [
+    "Appeler un psychologue\ndisponible (gratuit)"
+   ],
+   "to": [
+    "Accéder à l'aide immédiate"
+   ],
+   "kind": "extend"
+  }
+ ],
+ "note": "Les deux bonshommes représentent le même acteur, dessiné deux fois\npour la lisibilité. Tout exige d'être connecté, sauf S'inscrire,\nSe connecter et Réinitialiser son mot de passe."
+}

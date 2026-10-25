@@ -1,0 +1,192 @@
+{
+ "lanes": [
+  "Tâche planifiée d'appointment-service"
+ ],
+ "row": 165,
+ "nodes": [
+  {
+   "id": "s",
+   "type": "start",
+   "lane": 0,
+   "row": 0
+  },
+  {
+   "id": "t",
+   "type": "timer",
+   "lane": 0,
+   "row": 0.9,
+   "text": "Toutes les 5 minutes"
+  },
+  {
+   "id": "d1",
+   "type": "decision",
+   "lane": 0,
+   "row": 2.1,
+   "text": "État du rendez-vous ?"
+  },
+  {
+   "id": "a1",
+   "type": "action",
+   "lane": 0,
+   "row": 3.4,
+   "dx": -580,
+   "w": 520,
+   "text": "Annuler : non confirmé au moins 2 h avant"
+  },
+  {
+   "id": "d2",
+   "type": "decision",
+   "lane": 0,
+   "row": 3.4,
+   "text": "Déjà payé ?"
+  },
+  {
+   "id": "e0",
+   "type": "end",
+   "lane": 0,
+   "row": 2.1,
+   "dx": 620
+  },
+  {
+   "id": "a2",
+   "type": "action",
+   "lane": 0,
+   "row": 4.7,
+   "dx": -580,
+   "w": 520,
+   "text": "Notifier le patient et le psychologue"
+  },
+  {
+   "id": "d3",
+   "type": "decision",
+   "lane": 0,
+   "row": 4.7,
+   "text": "Moins de 1 h avant le début ?"
+  },
+  {
+   "id": "e1",
+   "type": "end",
+   "lane": 0,
+   "row": 3.4,
+   "dx": 620
+  },
+  {
+   "id": "b1",
+   "type": "action",
+   "lane": 0,
+   "row": 6.0,
+   "dx": 580,
+   "w": 520,
+   "text": "Envoyer un rappel de paiement (une seule fois)"
+  },
+  {
+   "id": "b2",
+   "type": "action",
+   "lane": 0,
+   "row": 6.0,
+   "w": 520,
+   "text": "Annuler le RDV et libérer le créneau"
+  },
+  {
+   "id": "ea",
+   "type": "end",
+   "lane": 0,
+   "row": 6.0,
+   "dx": -580
+  },
+  {
+   "id": "b3",
+   "type": "action",
+   "lane": 0,
+   "row": 7.2,
+   "w": 520,
+   "text": "Notifier le patient et le psychologue"
+  },
+  {
+   "id": "eb",
+   "type": "end",
+   "lane": 0,
+   "row": 7.2,
+   "dx": 580
+  },
+  {
+   "id": "e2",
+   "type": "end",
+   "lane": 0,
+   "row": 8.3
+  }
+ ],
+ "edges": [
+  {
+   "from": "s",
+   "to": "t"
+  },
+  {
+   "from": "t",
+   "to": "d1"
+  },
+  {
+   "from": "d1",
+   "to": "a1",
+   "label": "en attente, < 2 h du début",
+   "out": "left"
+  },
+  {
+   "from": "d1",
+   "to": "d2",
+   "label": "confirmé, < 3 h du début"
+  },
+  {
+   "from": "d1",
+   "to": "e0",
+   "label": "autre cas",
+   "out": "right",
+   "in": "left",
+   "path": []
+  },
+  {
+   "from": "a1",
+   "to": "a2"
+  },
+  {
+   "from": "a2",
+   "to": "ea"
+  },
+  {
+   "from": "d2",
+   "to": "e1",
+   "label": "oui",
+   "out": "right",
+   "in": "left",
+   "path": []
+  },
+  {
+   "from": "d2",
+   "to": "d3",
+   "label": "non"
+  },
+  {
+   "from": "d3",
+   "to": "b1",
+   "label": "non",
+   "out": "right"
+  },
+  {
+   "from": "d3",
+   "to": "b2",
+   "label": "oui"
+  },
+  {
+   "from": "b1",
+   "to": "eb"
+  },
+  {
+   "from": "b2",
+   "to": "b3"
+  },
+  {
+   "from": "b3",
+   "to": "e2"
+  }
+ ]
+}

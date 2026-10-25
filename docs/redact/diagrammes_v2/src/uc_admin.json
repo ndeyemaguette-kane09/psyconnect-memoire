@@ -1,0 +1,66 @@
+{
+ "actor": "Administrateur",
+ "width": 880,
+ "shift": -110,
+ "note": "Un psychologue sans justificatif ne peut pas être accepté.\nToutes ces fonctionnalités exigent d'être connecté en administrateur.",
+ "groups": [
+  {
+   "title": "Comptes utilisateurs",
+   "items": [
+    "Consulter et rechercher\nles utilisateurs",
+    "Activer ou désactiver un compte",
+    "Réinitialiser le mot de passe\nd'un utilisateur",
+    "Supprimer un compte"
+   ]
+  },
+  {
+   "title": "Validation des psychologues",
+   "items": [
+    "Valider ou refuser\nun psychologue",
+    {
+     "label": "Consulter le justificatif\nde licence",
+     "actor": false
+    }
+   ]
+  },
+  {
+   "title": "Supervision",
+   "items": [
+    "Consulter le tableau de bord",
+    "Superviser les rendez-vous\net les paiements",
+    "Consulter les statistiques"
+   ]
+  },
+  {
+   "title": "Paramètres de la plateforme",
+   "items": [
+    "Configurer le taux de commission",
+    "Diffuser une annonce"
+   ]
+  },
+  {
+   "title": "Signalements et support",
+   "items": [
+    "Traiter un signalement",
+    {
+     "label": "Consulter la preuve jointe",
+     "actor": false
+    },
+    "Répondre à un message\nde support",
+    "Marquer un message comme résolu"
+   ]
+  }
+ ],
+ "relations": [
+  [
+   "Valider ou refuser\nun psychologue",
+   "Consulter le justificatif\nde licence",
+   "include"
+  ],
+  [
+   "Consulter la preuve jointe",
+   "Traiter un signalement",
+   "extend"
+  ]
+ ]
+}

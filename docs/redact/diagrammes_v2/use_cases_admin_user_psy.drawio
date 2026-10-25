@@ -1,0 +1,775 @@
+<mxfile host="app.diagrams.net" pages="3">
+  <diagram name="Patient" id="A2VRbQMo4FaDORrCQ8RC">
+    <mxGraphModel dx="2462" dy="2911" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="patient_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E2EDFA;strokeColor=#141414;strokeWidth=3;verticalAlign=top;fontStyle=1;fontSize=21;spacingTop=4;" value="Système PsyConnect" vertex="1">
+          <mxGeometry height="1233" width="805" x="10" y="-3" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_4" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Compte et profil" vertex="1">
+          <mxGeometry height="433" width="389.5" x="50" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_5" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Trouver un psychologue" vertex="1">
+          <mxGeometry height="221" width="389.5" x="50" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_6" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Rendez-vous" vertex="1">
+          <mxGeometry height="454" width="389.5" x="50" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_7" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Paiement et solde" vertex="1">
+          <mxGeometry height="266" width="340" x="450" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_8" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Suivi personnel" vertex="1">
+          <mxGeometry height="358" width="332" x="458" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_9" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Communication" vertex="1">
+          <mxGeometry height="294" width="332" x="458" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_10" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Aide immédiate (hors rendez-vous)" vertex="1">
+          <mxGeometry height="210" width="332" x="458" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="S&#39;inscrire" vertex="1">
+          <mxGeometry height="38" width="295" x="80" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Se connecter" vertex="1">
+          <mxGeometry height="38" width="295" x="80" y="127" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_13" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Réinitialiser son&#xa;mot de passe" vertex="1">
+          <mxGeometry height="55" width="295" x="80" y="172" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_14" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Modifier son profil" vertex="1">
+          <mxGeometry height="38" width="295" x="80" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Renseigner ses&#xa;antécédents médicaux" vertex="1">
+          <mxGeometry height="55" width="295" x="80" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Activer le mode anonyme&#xa;(pseudonyme visible du psy)" vertex="1">
+          <mxGeometry height="70" width="295" x="80" y="341" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_17" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Régler ses préférences&#xa;de notification" vertex="1">
+          <mxGeometry height="55" width="295" x="80" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Chercher un psychologue&#xa;(spécialité, langue, ville)" vertex="1">
+          <mxGeometry height="55" width="295" x="80" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_19" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Voir les recommandations&#xa;personnalisées" vertex="1">
+          <mxGeometry height="55" width="295" x="80" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_20" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter le profil&#xa;d&#39;un psychologue" vertex="1">
+          <mxGeometry height="55" width="295" x="90" y="652" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_21" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Réserver un rendez-vous&#xa;(au moins 2 h à l&#39;avance)" vertex="1">
+          <mxGeometry height="55" width="295" x="80" y="762" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_22" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter ses rendez-vous" vertex="1">
+          <mxGeometry height="38" width="295" x="80" y="824" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_23" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Reporter un rendez-vous" vertex="1">
+          <mxGeometry height="38" width="245" x="130" y="869" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_24" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Annuler un rendez-vous" vertex="1">
+          <mxGeometry height="38" width="295" x="80" y="914" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_25" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Être remboursé sur son solde&#xa;(plus de 48 h avant)" vertex="1">
+          <mxGeometry height="76" width="295" x="80" y="959" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_26" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Rejoindre la consultation&#xa;vidéo (confirmé et payé)" vertex="1">
+          <mxGeometry height="55" width="295" x="80" y="1045" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_27" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Laisser un avis anonyme&#xa;(après une séance terminée)" vertex="1">
+          <mxGeometry height="70" width="295" x="80" y="1107" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_28" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Payer un rendez-vous&#xa;depuis son solde" vertex="1">
+          <mxGeometry height="55" width="295" x="484" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_29" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Recharger son solde&#xa;(Wave, Orange Money)" vertex="1">
+          <mxGeometry height="55" width="295" x="484" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_30" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Retirer son solde" vertex="1">
+          <mxGeometry height="38" width="295" x="484" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_31" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter l&#39;historique&#xa;des mouvements" vertex="1">
+          <mxGeometry height="55" width="295" x="484" y="251" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_32" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Tenir un journal d&#39;humeur" vertex="1">
+          <mxGeometry height="38" width="295" x="484" y="361" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_33" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Répondre à un questionnaire&#xa;PHQ-9 / GAD-7" vertex="1">
+          <mxGeometry height="73" width="295" x="484" y="406" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_34" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter l&#39;historique&#xa;de ses scores" vertex="1">
+          <mxGeometry height="55" width="295" x="484" y="486" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_35" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Suivre les recommandations&#xa;reçues après une séance" vertex="1">
+          <mxGeometry height="67" width="295" x="484" y="548" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_36" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Discuter avec&#xa;le compagnon Xalaat" vertex="1">
+          <mxGeometry height="55" width="295" x="484" y="622" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_37" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Échanger des messages&#xa;avec son psychologue" vertex="1">
+          <mxGeometry height="55" width="295" x="484" y="732" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_38" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter ses notifications" vertex="1">
+          <mxGeometry height="38" width="295" x="484" y="794" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_39" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Lire les annonces&#xa;de la plateforme" vertex="1">
+          <mxGeometry height="55" width="295" x="484" y="839" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_40" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Contacter l&#39;administrateur" vertex="1">
+          <mxGeometry height="38" width="295" x="484" y="901" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_41" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Signaler un psychologue" vertex="1">
+          <mxGeometry height="38" width="295" x="484" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_42" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Voir les numéros d&#39;urgence&#xa;(SAMU, police, pompiers)" vertex="1">
+          <mxGeometry height="61" width="295" x="484" y="1039" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_43" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Accéder à l&#39;aide immédiate" vertex="1">
+          <mxGeometry height="38" width="239" x="540" y="1107" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_44" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Appeler un psychologue&#xa;disponible (gratuit)" vertex="1">
+          <mxGeometry height="47" width="295" x="484" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_45" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=3;fontStyle=1;fontSize=14;" value="Patient" vertex="1">
+          <mxGeometry height="127.5" width="62" x="-280" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_46" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_47" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_48" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_49" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_50" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_51" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_52" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_53" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_54" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_55" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_56" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_26" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_57" edge="1" parent="1" source="patient_45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="patient_27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_58" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=3;fontStyle=1;fontSize=14;" value="Patient" vertex="1">
+          <mxGeometry height="127.5" width="62" x="970" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_59" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_28" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_60" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_29" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_61" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_30" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_62" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_63" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_32" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_64" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_65" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_34" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_66" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_35" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_67" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_36" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_68" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_37" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_69" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_38" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_70" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_39" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_71" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_40" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_72" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_41" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_73" edge="1" parent="1" source="patient_58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="patient_43" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_74" edge="1" parent="1" source="patient_13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="patient_12" value="«extend»">
+          <mxGeometry relative="1" x="-0.5951" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="410" y="199.5" />
+              <mxPoint x="410" y="146" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="patient_75" edge="1" parent="1" source="patient_20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="patient_18" value="«extend»">
+          <mxGeometry relative="1" x="0.2922" y="35" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="420" y="679.5" />
+              <mxPoint x="420" y="555.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="patient_76" edge="1" parent="1" source="patient_20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="patient_19" value="«extend»">
+          <mxGeometry relative="1" x="-0.1413" y="35" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="patient_77" edge="1" parent="1" source="patient_23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=1;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="patient_22" value="«extend»">
+          <mxGeometry relative="1" x="0.3973" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="130" y="900" />
+              <mxPoint x="60" y="900" />
+              <mxPoint x="60" y="880" />
+              <mxPoint x="123.4" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="patient_78" edge="1" parent="1" source="patient_24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="patient_22" value="«extend»">
+          <mxGeometry relative="1" x="-0.8333" y="23" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="420" y="933" />
+              <mxPoint x="420" y="843" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="patient_79" edge="1" parent="1" source="patient_25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="patient_24" value="«extend»">
+          <mxGeometry relative="1" x="0.0962" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="60" y="997" />
+              <mxPoint x="60" y="933" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="patient_80" edge="1" parent="1" source="patient_29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="patient_28" value="«extend»">
+          <mxGeometry relative="1" x="-0.9273" y="19" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="460" y="171.5" />
+              <mxPoint x="460" y="109.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="patient_81" edge="1" parent="1" source="patient_43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="patient_42" value="«include»">
+          <mxGeometry relative="1" x="-0.6444" y="-26" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="484" y="1126" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="patient_82" edge="1" parent="1" source="patient_44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0.032;entryY=0.577;entryDx=0;entryDy=0;entryPerimeter=0;" target="patient_43" value="«extend»">
+          <mxGeometry relative="1" x="-0.0302" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="484" y="1179.5" />
+              <mxPoint x="474" y="1179.5" />
+              <mxPoint x="474" y="1150" />
+              <mxPoint x="547.7" y="1150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="patient_83" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCEE;strokeColor=#7887A0;align=left;spacingLeft=10;fontSize=13;" value="Les deux bonshommes représentent le même acteur, dessiné deux fois pour la lisibilité. Tout exige d&#39;être connecté, sauf S&#39;inscrire, Se connecter et Réinitialiser son mot de passe." vertex="1">
+          <mxGeometry height="75" width="717.5" x="50" y="1260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Psychologue" id="etNqCnIOGexaPVzZvDps">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="900" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="psy_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E2EDFA;strokeColor=#141414;strokeWidth=3;verticalAlign=top;fontStyle=1;fontSize=21;spacingTop=4;" value="Système PsyConnect" vertex="1">
+          <mxGeometry height="1100" width="689.5" x="130.5" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_4" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Compte et profil" vertex="1">
+          <mxGeometry height="447" width="299" x="140.5" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_5" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Rendez-vous et consultation" vertex="1">
+          <mxGeometry height="349" width="299" x="140.5" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_6" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Suivi des patients" vertex="1">
+          <mxGeometry height="425" width="352" x="458" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_7" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Activité et revenus" vertex="1">
+          <mxGeometry height="308" width="352" x="458" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_8" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Communication" vertex="1">
+          <mxGeometry height="289" width="352" x="458" y="809" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="S&#39;inscrire" vertex="1">
+          <mxGeometry height="38" width="178.5" x="151.5" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Joindre son justificatif&#xa;de licence" vertex="1">
+          <mxGeometry height="55" width="206.5" x="141.5" y="127" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Se connecter" vertex="1">
+          <mxGeometry height="38" width="178.5" x="151.5" y="189" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Réinitialiser son&#xa;mot de passe" vertex="1">
+          <mxGeometry height="55" width="188.5" x="151.5" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_13" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Modifier son profil&#xa;(tarif, langues, cabinet)" vertex="1">
+          <mxGeometry height="58" width="248.5" x="151.5" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_14" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Définir ses disponibilités&#xa;récurrentes" vertex="1">
+          <mxGeometry height="64" width="248.5" x="151.5" y="361" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Se déclarer disponible&#xa;pour l&#39;aide immédiate" vertex="1">
+          <mxGeometry height="55" width="248.5" x="151.5" y="432" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter son agenda" vertex="1">
+          <mxGeometry height="38" width="218.5" x="151.5" y="542" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_17" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Accepter ou refuser&#xa;une demande&#xa;(2 h avant au plus)" vertex="1">
+          <mxGeometry height="74" width="226" x="151.5" y="587" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Mener la&#xa;consultation vidéo" vertex="1">
+          <mxGeometry height="55" width="226" x="151.5" y="668" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_19" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Donner des&#xa;recommandations&#xa;après la séance" vertex="1">
+          <mxGeometry height="74" width="226" x="151.5" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_20" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter les avis reçus" vertex="1">
+          <mxGeometry height="38" width="218.5" x="151.5" y="811" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_21" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter la liste&#xa;de ses patients" vertex="1">
+          <mxGeometry height="55" width="262" x="517" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_22" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter le dossier&#xa;d&#39;un patient" vertex="1">
+          <mxGeometry height="55" width="262" x="517" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_23" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Rédiger des notes&#xa;cliniques privées" vertex="1">
+          <mxGeometry height="50" width="196" x="540.5" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_24" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Envoyer un questionnaire&#xa;PHQ-9 / GAD-7" vertex="1">
+          <mxGeometry height="73" width="226" x="520" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_25" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter les résultats&#xa;aux questionnaires" vertex="1">
+          <mxGeometry height="55" width="237" x="520" y="348" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_26" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Ajouter ou retirer un&#xa;patient de son suivi" vertex="1">
+          <mxGeometry height="55" width="226" x="520" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_27" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter ses statistiques&#xa;d&#39;activité" vertex="1">
+          <mxGeometry height="76" width="262" x="517" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_28" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter son portefeuille&#xa;et ses revenus" vertex="1">
+          <mxGeometry height="64" width="262" x="520" y="604" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_29" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter l&#39;historique&#xa;des transactions" vertex="1">
+          <mxGeometry height="55" width="206.5" x="560" y="686" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_30" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Retirer ses gains" vertex="1">
+          <mxGeometry height="38" width="206.5" x="560" y="748" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_31" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Échanger des messages&#xa;avec ses patients" vertex="1">
+          <mxGeometry height="61" width="262" x="484" y="841" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_32" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter ses&#xa;notifications" vertex="1">
+          <mxGeometry height="55" width="262" x="484" y="909" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_33" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Lire les annonces&#xa;de la plateforme" vertex="1">
+          <mxGeometry height="55" width="262" x="484" y="971" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_34" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Contacter&#xa;l&#39;administrateur" vertex="1">
+          <mxGeometry height="55" width="262" x="484" y="1033" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_35" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=3;fontStyle=1;fontSize=14;" value="Psychologue" vertex="1">
+          <mxGeometry height="127.5" width="62" x="-90" y="382.5" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_36" edge="1" parent="1" source="psy_35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="psy_9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_37" edge="1" parent="1" source="psy_35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="psy_11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_38" edge="1" parent="1" source="psy_35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="psy_13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_39" edge="1" parent="1" source="psy_35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="psy_14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_40" edge="1" parent="1" source="psy_35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="psy_15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_41" edge="1" parent="1" source="psy_35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="psy_16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_42" edge="1" parent="1" source="psy_35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="psy_18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_43" edge="1" parent="1" source="psy_35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="psy_20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_44" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=3;fontStyle=1;fontSize=14;" value="Psychologue" vertex="1">
+          <mxGeometry height="127.5" width="62" x="990" y="382.5" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_45" edge="1" parent="1" source="psy_44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="psy_21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_46" edge="1" parent="1" source="psy_44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="psy_27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_47" edge="1" parent="1" source="psy_44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="psy_28" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psy_48" edge="1" parent="1" source="psy_44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="psy_31" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="427.1" />
+              <mxPoint x="890" y="871.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_49" edge="1" parent="1" source="psy_44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="psy_32" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="427.1" />
+              <mxPoint x="890" y="936.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_50" edge="1" parent="1" source="psy_44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="psy_33" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="427.1" />
+              <mxPoint x="890" y="998.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_51" edge="1" parent="1" source="psy_44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="psy_34" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="427.1" />
+              <mxPoint x="890" y="1060.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_52" edge="1" parent="1" source="psy_9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="psy_10" value="«include»">
+          <mxGeometry relative="1" x="-0.6542" y="-19" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="390" y="101" />
+              <mxPoint x="390" y="154.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_53" edge="1" parent="1" source="psy_12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="psy_11" value="«extend»">
+          <mxGeometry relative="1" x="1" y="24" as="geometry">
+            <mxPoint x="-9" y="-2" as="offset" />
+            <Array as="points">
+              <mxPoint x="390" y="261.5" />
+              <mxPoint x="390" y="208" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_54" edge="1" parent="1" source="psy_17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="psy_16" value="«extend»">
+          <mxGeometry relative="1" x="0.7428" y="29" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="420" y="624" />
+              <mxPoint x="420" y="561" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_55" edge="1" parent="1" source="psy_19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="psy_18" value="«extend»">
+          <mxGeometry relative="1" x="0.016" y="30" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="420" y="767" />
+              <mxPoint x="420" y="695.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_56" edge="1" parent="1" source="psy_22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="psy_21" value="«extend»">
+          <mxGeometry relative="1" x="0.6538" y="-29" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="470" y="171.5" />
+              <mxPoint x="470" y="109.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_57" edge="1" parent="1" source="psy_23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0.233;entryY=0.892;entryDx=0;entryDy=0;entryPerimeter=0;" target="psy_22" value="«extend»">
+          <mxGeometry relative="1" x="0.2212" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="484" y="233.5" />
+              <mxPoint x="484" y="210" />
+              <mxPoint x="578.1" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_58" edge="1" parent="1" source="psy_24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=1;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="psy_22" value="«extend»">
+          <mxGeometry relative="1" x="-0.9579" y="34" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="782" y="304.5" />
+              <mxPoint x="782" y="210" />
+              <mxPoint x="741.5" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_59" edge="1" parent="1" source="psy_25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="psy_22" value="«extend»">
+          <mxGeometry relative="1" x="-0.0444" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="470" y="375.5" />
+              <mxPoint x="470" y="190" />
+              <mxPoint x="484" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_60" edge="1" parent="1" source="psy_26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="psy_22" value="«extend»">
+          <mxGeometry relative="1" x="-0.8601" y="28" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="801" y="437.5" />
+              <mxPoint x="801" y="171.5" />
+            </Array>
+            <mxPoint x="803" y="432" as="sourcePoint" />
+            <mxPoint x="800" y="166" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_61" edge="1" parent="1" source="psy_29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0.979;entryY=0.703;entryDx=0;entryDy=0;exitDx=0;exitDy=0;entryPerimeter=0;" target="psy_28" value="«extend»">
+          <mxGeometry relative="1" x="0.3684" y="36" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="776.5" y="713.5" />
+              <mxPoint x="776.5" y="676" />
+              <mxPoint x="780" y="676" />
+              <mxPoint x="780" y="678" />
+              <mxPoint x="776.5" y="678" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_62" edge="1" parent="1" source="psy_30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="psy_28" value="«extend»">
+          <mxGeometry relative="1" x="0.1261" y="-30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="480" y="767" />
+              <mxPoint x="480" y="636" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="psy_63" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCEE;strokeColor=#7887A0;align=left;spacingLeft=10;fontSize=13;" value="Les deux bonshommes représentent le même acteur, dessiné deux fois pour la lisibilité. Le profil n&#39;est visible des patients qu&#39;après validation du justificatif par l&#39;administrateur." vertex="1">
+          <mxGeometry height="75" width="654.5" x="151.5" y="1125" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Administrateur" id="1X4y70dya9qHWYzwSozQ">
+    <mxGraphModel dx="1702" dy="684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="admin_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E2EDFA;strokeColor=#141414;strokeWidth=3;verticalAlign=top;fontStyle=1;fontSize=21;spacingTop=4;" value="Système PsyConnect" vertex="1">
+          <mxGeometry height="678" width="660" x="110" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_4" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Comptes utilisateurs" vertex="1">
+          <mxGeometry height="290" width="319.5" x="120" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_5" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Paramètres" vertex="1">
+          <mxGeometry height="142" width="319.5" x="120" y="353" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_6" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Validation des psychologues" vertex="1">
+          <mxGeometry height="168" width="319.5" x="120" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_7" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Supervision" vertex="1">
+          <mxGeometry height="283" width="292" x="458" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_8" parent="1" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFD;strokeColor=#7887A0;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=8;fontStyle=1;fontSize=16;fontColor=#192D5F;" value="Signalements et support" vertex="1">
+          <mxGeometry height="287" width="292" x="458" y="346" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter et rechercher&#xa;les utilisateurs" vertex="1">
+          <mxGeometry height="73" width="242.5" x="140" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Activer ou désactiver&#xa;un compte" vertex="1">
+          <mxGeometry height="55" width="211.5" x="171" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Réinitialiser le mot de&#xa;passe d&#39;un utilisateur" vertex="1">
+          <mxGeometry height="61" width="242.5" x="140" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Supprimer un compte" vertex="1">
+          <mxGeometry height="38" width="242.5" x="140" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_13" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Configurer le taux&#xa;de commission" vertex="1">
+          <mxGeometry height="55" width="242.5" x="171" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_14" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Diffuser une annonce" vertex="1">
+          <mxGeometry height="38" width="242.5" x="171" y="447" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Valider ou refuser&#xa;un psychologue" vertex="1">
+          <mxGeometry height="55" width="229" x="171" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter le justificatif&#xa;de licence" vertex="1">
+          <mxGeometry height="64" width="219" x="171" y="602" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_17" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter le&#xa;tableau de bord" vertex="1">
+          <mxGeometry height="55" width="211.5" x="515" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter&#xa;les statistiques" vertex="1">
+          <mxGeometry height="55" width="211.5" x="515" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_19" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Superviser&#xa;les rendez-vous" vertex="1">
+          <mxGeometry height="55" width="185" x="515" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_20" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Superviser&#xa;les paiements" vertex="1">
+          <mxGeometry height="55" width="211.5" x="515" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_21" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Traiter un signalement" vertex="1">
+          <mxGeometry height="38" width="211.5" x="515" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_22" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Consulter la&#xa;preuve jointe" vertex="1">
+          <mxGeometry height="55" width="211.5" x="515" y="423" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_23" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Répondre à un message&#xa;de support" vertex="1">
+          <mxGeometry height="76" width="211.5" x="515" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_24" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#141414;strokeWidth=1.5;fontStyle=1;fontSize=15;" value="Marquer un message&#xa;comme résolu" vertex="1">
+          <mxGeometry height="55" width="211.5" x="515" y="568" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_25" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=3;fontStyle=1;fontSize=14;" value="Administrateur" vertex="1">
+          <mxGeometry height="127.5" width="62" x="-80" y="261" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_26" edge="1" parent="1" source="admin_25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="admin_9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_27" edge="1" parent="1" source="admin_25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="admin_13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_28" edge="1" parent="1" source="admin_25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="admin_14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_29" edge="1" parent="1" source="admin_25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" target="admin_15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_30" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=3;fontStyle=1;fontSize=14;" value="Administrateur" vertex="1">
+          <mxGeometry height="127.5" width="62" x="870" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_31" edge="1" parent="1" source="admin_30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="admin_17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_32" edge="1" parent="1" source="admin_30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="admin_18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_33" edge="1" parent="1" source="admin_30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="admin_21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_34" edge="1" parent="1" source="admin_30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#005C6E;strokeWidth=2;exitX=0;exitY=0.35;entryX=1;entryY=0.5;" target="admin_23" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_35" edge="1" parent="1" source="admin_10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="admin_9" value="«extend»">
+          <mxGeometry relative="1" x="-1" y="30" as="geometry">
+            <mxPoint x="-2" y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="410" y="189.5" />
+              <mxPoint x="410" y="118.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin_36" edge="1" parent="1" source="admin_11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0.12;entryY=0.877;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;" target="admin_9" value="«extend»">
+          <mxGeometry relative="1" x="-0.4352" y="-30" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="130" y="254.5" />
+              <mxPoint x="130" y="170" />
+              <mxPoint x="169.1" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin_37" edge="1" parent="1" source="admin_12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0.891;entryY=0.178;entryDx=0;entryDy=0;entryPerimeter=0;" target="admin_9" value="«extend»">
+          <mxGeometry relative="1" x="-0.6491" y="20" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="430" y="314" />
+              <mxPoint x="430" y="60" />
+              <mxPoint x="356.1" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin_38" edge="1" parent="1" source="admin_15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="admin_16" value="«include»">
+          <mxGeometry relative="1" x="-0.0987" y="-30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="420" y="567.5" />
+              <mxPoint x="420" y="634" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin_39" edge="1" parent="1" source="admin_19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0.952;entryY=0.76;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="admin_18" value="«extend»">
+          <mxGeometry relative="1" x="0.5556" y="13" as="geometry">
+            <mxPoint x="7" y="11" as="offset" />
+            <Array as="points">
+              <mxPoint x="736.5" y="233.5" />
+              <mxPoint x="736.5" y="210" />
+              <mxPoint x="730" y="210" />
+              <mxPoint x="730" y="209" />
+              <mxPoint x="716.3" y="209" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin_40" edge="1" parent="1" source="admin_20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="admin_18" value="«extend»">
+          <mxGeometry relative="1" x="0.2057" y="-26" as="geometry">
+            <mxPoint y="-1" as="offset" />
+            <Array as="points">
+              <mxPoint x="470" y="295.5" />
+              <mxPoint x="470" y="171.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin_41" edge="1" parent="1" source="admin_22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="admin_21" value="«extend»">
+          <mxGeometry relative="1" x="-0.7909" y="-21" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="470" y="450.5" />
+              <mxPoint x="470" y="397" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin_42" edge="1" parent="1" source="admin_24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;strokeWidth=1.5;fontStyle=1;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="admin_23" value="«extend»">
+          <mxGeometry relative="1" x="-0.8154" y="-25" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="470" y="595.5" />
+              <mxPoint x="470" y="523" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin_43" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCEE;strokeColor=#7887A0;align=left;spacingLeft=10;fontSize=13;" value="Les deux bonshommes représentent le même acteur, dessiné deux fois pour la lisibilité. Un psychologue sans justificatif ne peut pas être accepté." vertex="1">
+          <mxGeometry height="75" width="597.5" x="141.25" y="700" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

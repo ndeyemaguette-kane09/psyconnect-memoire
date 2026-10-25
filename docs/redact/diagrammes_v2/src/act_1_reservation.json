@@ -1,0 +1,357 @@
+{
+ "lanes": [
+  "Patient",
+  "Système",
+  "Psychologue"
+ ],
+ "nodes": [
+  {
+   "id": "s",
+   "type": "start",
+   "lane": 0,
+   "row": 0
+  },
+  {
+   "id": "a1",
+   "type": "action",
+   "lane": 0,
+   "row": 1,
+   "text": "Rechercher un psychologue"
+  },
+  {
+   "id": "a2",
+   "type": "action",
+   "lane": 0,
+   "row": 2,
+   "text": "Choisir un créneau (au moins 2 h à l'avance)"
+  },
+  {
+   "id": "a3",
+   "type": "action",
+   "lane": 0,
+   "row": 3,
+   "text": "Envoyer la demande de rendez-vous"
+  },
+  {
+   "id": "d1",
+   "type": "decision",
+   "lane": 1,
+   "row": 4,
+   "text": "Psy approuvé et créneau libre ?",
+   "tw": 280
+  },
+  {
+   "id": "e1",
+   "type": "action",
+   "lane": 0,
+   "row": 4,
+   "text": "Afficher un message d'erreur"
+  },
+  {
+   "id": "a4",
+   "type": "action",
+   "lane": 1,
+   "row": 5.3,
+   "text": "Enregistrer le RDV (EN ATTENTE) et notifier"
+  },
+  {
+   "id": "a5",
+   "type": "action",
+   "lane": 2,
+   "row": 6.3,
+   "text": "Examiner la demande"
+  },
+  {
+   "id": "d2",
+   "type": "decision",
+   "lane": 2,
+   "row": 7.4,
+   "text": "Réponse du psychologue ?"
+  },
+  {
+   "id": "r1",
+   "type": "action",
+   "lane": 1,
+   "row": 9.3,
+   "text": "Passer le RDV en REFUSÉ et notifier le patient",
+   "dx": 125,
+   "w": 330
+  },
+  {
+   "id": "a6",
+   "type": "action",
+   "lane": 2,
+   "row": 8.6,
+   "text": "Confirmer le rendez-vous",
+   "dx": 0
+  },
+  {
+   "id": "a7",
+   "type": "action",
+   "lane": 1,
+   "row": 10.9,
+   "text": "Passer le RDV en CONFIRMÉ et notifier le patient"
+  },
+  {
+   "id": "a8",
+   "type": "action",
+   "lane": 0,
+   "row": 13.0,
+   "text": "Payer depuis son solde"
+  },
+  {
+   "id": "d3",
+   "type": "decision",
+   "lane": 1,
+   "row": 14.1,
+   "text": "Solde suffisant ?"
+  },
+  {
+   "id": "rc",
+   "type": "action",
+   "lane": 0,
+   "row": 14.1,
+   "text": "Recharger son solde (Wave, Orange Money)"
+  },
+  {
+   "id": "a9",
+   "type": "action",
+   "lane": 1,
+   "row": 15.3,
+   "text": "Débiter le solde, enregistrer le paiement, notifier patient et psy"
+  },
+  {
+   "id": "f1",
+   "type": "end",
+   "lane": 1,
+   "row": 16.3
+  },
+  {
+   "id": "f0",
+   "type": "end",
+   "lane": 0,
+   "row": 9.3,
+   "dx": 0
+  },
+  {
+   "id": "d0",
+   "type": "decision",
+   "lane": 0,
+   "row": 11.95,
+   "text": "Payer maintenant ?"
+  },
+  {
+   "id": "x0",
+   "type": "action",
+   "lane": 1,
+   "row": 11.95,
+   "text": "Annuler le rendez-vous (voir annulation)"
+  },
+  {
+   "id": "fx",
+   "type": "end",
+   "lane": 1,
+   "row": 12.85
+  },
+  {
+   "id": "tm1",
+   "type": "timer",
+   "lane": 1,
+   "row": 6.55,
+   "dx": -120,
+   "text": "2 h avant la séance, toujours en attente"
+  },
+  {
+   "id": "ta1",
+   "type": "action",
+   "lane": 1,
+   "row": 7.6,
+   "dx": -120,
+   "w": 420,
+   "text": "Annuler la demande, notifier patient et psy"
+  },
+  {
+   "id": "te1",
+   "type": "end",
+   "lane": 1,
+   "row": 8.6,
+   "dx": -120
+  },
+  {
+   "id": "tm2",
+   "type": "timer",
+   "lane": 1,
+   "row": 17.1,
+   "dx": -90,
+   "text": "1 h avant la séance, toujours non payé"
+  },
+  {
+   "id": "ta2",
+   "type": "action",
+   "lane": 1,
+   "row": 18.15,
+   "dx": -90,
+   "w": 420,
+   "text": "Annuler le RDV, notifier patient et psy"
+  },
+  {
+   "id": "te2",
+   "type": "end",
+   "lane": 1,
+   "row": 19.2,
+   "dx": -90
+  }
+ ],
+ "edges": [
+  {
+   "from": "s",
+   "to": "a1"
+  },
+  {
+   "from": "a1",
+   "to": "a2"
+  },
+  {
+   "from": "a2",
+   "to": "a3"
+  },
+  {
+   "from": "a3",
+   "to": "d1"
+  },
+  {
+   "from": "d1",
+   "to": "e1",
+   "label": "non",
+   "out": "left",
+   "in": "right",
+   "path": []
+  },
+  {
+   "from": "e1",
+   "to": "a2",
+   "out": "left",
+   "in": "left",
+   "path": [
+    [
+     "sx-25",
+     null
+    ],
+    [
+     null,
+     "ty"
+    ]
+   ]
+  },
+  {
+   "from": "d1",
+   "to": "a4",
+   "label": "oui"
+  },
+  {
+   "from": "a4",
+   "to": "a5"
+  },
+  {
+   "from": "a5",
+   "to": "d2"
+  },
+  {
+   "from": "d2",
+   "to": "r1",
+   "label": "refuse",
+   "out": "left"
+  },
+  {
+   "from": "d2",
+   "to": "a6",
+   "label": "accepte"
+  },
+  {
+   "from": "r1",
+   "to": "f0",
+   "out": "left",
+   "in": "right",
+   "path": []
+  },
+  {
+   "from": "a6",
+   "to": "a7"
+  },
+  {
+   "from": "a8",
+   "to": "d3"
+  },
+  {
+   "from": "d3",
+   "to": "rc",
+   "label": "non",
+   "out": "left",
+   "in": "right",
+   "path": []
+  },
+  {
+   "from": "rc",
+   "to": "a8",
+   "out": "left",
+   "in": "left",
+   "path": [
+    [
+     "sx-25",
+     null
+    ],
+    [
+     null,
+     "ty"
+    ]
+   ]
+  },
+  {
+   "from": "d3",
+   "to": "a9",
+   "label": "oui"
+  },
+  {
+   "from": "a9",
+   "to": "f1"
+  },
+  {
+   "from": "a7",
+   "to": "d0"
+  },
+  {
+   "from": "d0",
+   "to": "a8",
+   "label": "oui"
+  },
+  {
+   "from": "d0",
+   "to": "x0",
+   "label": "renonce",
+   "out": "right",
+   "in": "left",
+   "path": []
+  },
+  {
+   "from": "x0",
+   "to": "fx"
+  },
+  {
+   "from": "tm1",
+   "to": "ta1"
+  },
+  {
+   "from": "ta1",
+   "to": "te1"
+  },
+  {
+   "from": "tm2",
+   "to": "ta2"
+  },
+  {
+   "from": "ta2",
+   "to": "te2"
+  }
+ ],
+ "row": 150
+}

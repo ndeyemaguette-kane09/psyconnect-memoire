@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tests d'auto-évaluation gratuits et anonymes | PsyConnect</title>
+<meta name="description" content="Trois échelles reconnues, PHQ-9, GAD-7 et Rosenberg, pour faire le point sur votre humeur, votre anxiété et votre estime de soi. Gratuit, anonyme, aucune donnée envoyée.">
+<meta name="theme-color" content="#0D7B6E">
+<link rel="icon" href="assets/img/psyconnect-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="preload" href="assets/fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/img/psyconnect-mark-light.svg" alt="">
+      <span class="brand-name">Psy<em>Connect</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html#probleme">Le constat</a>
+      <a href="index.html#application">L'application</a>
+      <a href="index.html#parcours">Patients &amp; psychologues</a>
+      <a href="tests.html">Tests gratuits</a>
+      <a href="index.html#faq">Questions</a>
+    </nav>
+    <a class="btn btn--primary btn--sm" href="index.html#application">Découvrir PsyConnect</a>
+  </div>
+</header>
+
+<main>
+
+  <aside class="project-banner">
+    <div class="wrap">
+      <p><strong>Projet académique en cours de développement.</strong> Ce site présente PsyConnect ; l'application n'est pas encore ouverte au public.</p>
+    </div>
+  </aside>
+
+  <section id="hub">
+    <div class="tests-hero">
+      <div class="wrap">
+        <div class="eyebrow">Auto-évaluation</div>
+        <h1>Faire le point sur soi, en quelques minutes.</h1>
+        <p class="lede">
+          Trois questionnaires utilisés en consultation et en recherche. Ils ne posent pas de
+          diagnostic. Ils donnent un repère chiffré, permettent de suivre l'évolution dans le
+          temps et aident à trouver des mots pour en parler à un professionnel.
+        </p>
+        <div class="privacy-note">
+          <p>Tout est calculé dans votre navigateur. Aucune réponse, aucun score, aucun identifiant n'est envoyé à un serveur.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <div class="test-cards">
+          <article class="test-card">
+            <div class="code">PHQ-9</div>
+            <h3>Humeur et moral</h3>
+            <p>Un questionnaire très répandu pour repérer les signes d'une dépression et suivre leur intensité d'une période à l'autre.</p>
+            <div class="test-meta">
+              <div><span>Questions</span><b>9</b></div>
+              <div><span>Durée</span><b>≈ 3 minutes</b></div>
+              <div><span>Score</span><b>sur 27</b></div>
+            </div>
+            <a class="btn btn--primary btn--block" href="#phq9">Commencer</a>
+          </article>
+
+          <article class="test-card">
+            <div class="code">GAD-7</div>
+            <h3>Anxiété et inquiétude</h3>
+            <p>Sept questions sur l'inquiétude, la tension et l'irritabilité des deux dernières semaines. Un outil de référence pour repérer l'anxiété.</p>
+            <div class="test-meta">
+              <div><span>Questions</span><b>7</b></div>
+              <div><span>Durée</span><b>≈ 2 minutes</b></div>
+              <div><span>Score</span><b>sur 21</b></div>
+            </div>
+            <a class="btn btn--primary btn--block" href="#gad7">Commencer</a>
+          </article>
+
+          <article class="test-card">
+            <div class="code">Rosenberg</div>
+            <h3>Estime de soi</h3>
+            <p>Mesure le regard que vous portez sur vous-même. L'échelle de Rosenberg est utilisée en recherche depuis les années 1960.</p>
+            <div class="test-meta">
+              <div><span>Questions</span><b>10</b></div>
+              <div><span>Durée</span><b>≈ 3 minutes</b></div>
+              <div><span>Score</span><b>sur 30</b></div>
+            </div>
+            <a class="btn btn--primary btn--block" href="#rses">Commencer</a>
+          </article>
+        </div>
+
+        <div class="notice" style="margin-top:40px;max-width:820px">
+          <h4>À lire avant de commencer</h4>
+          <p>
+            Un questionnaire ne connaît ni votre histoire, ni votre contexte, ni ce que vous avez traversé
+            cette semaine. Un score élevé ne veut pas dire que quelque chose cloche chez vous, et un score
+            bas ne prouve pas que tout va bien. Seul un entretien avec un professionnel peut poser un
+            diagnostic. Ces résultats servent à ouvrir la discussion, pas à la clore.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="runner" class="section is-hidden">
+    <div class="wrap">
+      <div class="runner">
+        <div class="runner-top">
+          <button class="back" id="btnBack" type="button">← Retour</button>
+          <span class="count" id="qCount"></span>
+        </div>
+        <div class="progress"><i id="qProgress" style="width:0%"></i></div>
+        <div class="q-frame" id="qFrame"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="result" class="section is-hidden">
+    <div class="wrap">
+      <div class="result" id="resultBody"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/img/psyconnect-mark-light.svg" alt="">
+          <span class="brand-name">Psy<em>Connect</em></span>
+        </a>
+        <p class="tagline">Prenez soin de vous, en toute confiance. Une plateforme sénégalaise pour rendre l'accompagnement psychologique accessible partout dans le pays.</p>
+      </div>
+      <div>
+        <h5>Le projet</h5>
+        <ul>
+          <li><a href="index.html#probleme">Le constat</a></li>
+          <li><a href="index.html#application">L'application</a></li>
+          <li><a href="index.html#parcours">Les deux parcours</a></li>
+          <li><a href="index.html#faq">Questions fréquentes</a></li>
+          <li><a href="mentions.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Tests gratuits</h5>
+        <ul>
+          <li><a href="#phq9">Humeur et moral</a></li>
+          <li><a href="#gad7">Anxiété</a></li>
+          <li><a href="#rses">Estime de soi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Urgences</h5>
+        <ul>
+          <li><a href="tel:1515">SAMU · 1515</a></li>
+          <li><a href="tel:18">Pompiers · 18</a></li>
+          <li><a href="tel:+221338340158">Thiaroye · 33 834 01 58</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> PsyConnect — Ndeye Maguette Kane.</span>
+      <span>Les tests de ce site sont anonymes et ne posent aucun diagnostic.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/tests.js"></script>
+</body>
+</html>

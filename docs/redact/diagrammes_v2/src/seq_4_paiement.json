@@ -1,0 +1,138 @@
+{
+ "participants": [
+  {
+   "id": "pat",
+   "label": "App patient"
+  },
+  {
+   "id": "gw",
+   "label": "API Gateway"
+  },
+  {
+   "id": "pay",
+   "label": "payment-",
+   "sub": "service"
+  },
+  {
+   "id": "appt",
+   "label": "appointment-",
+   "sub": "service"
+  },
+  {
+   "id": "user",
+   "label": "user-service"
+  },
+  {
+   "id": "notif",
+   "label": "notification-",
+   "sub": "service"
+  }
+ ],
+ "steps": [
+  {
+   "t": "msg",
+   "from": "pat",
+   "to": "gw",
+   "text": "POST /payments (appointmentId)"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "pay",
+   "text": "transmet"
+  },
+  {
+   "t": "msg",
+   "from": "pay",
+   "to": "appt",
+   "text": "lit le rendez-vous"
+  },
+  {
+   "t": "ret",
+   "from": "appt",
+   "to": "pay",
+   "text": "statut, patient, psy"
+  },
+  {
+   "t": "msg",
+   "from": "pay",
+   "to": "user",
+   "text": "identifie le patient, lit le tarif du psy"
+  },
+  {
+   "t": "ret",
+   "from": "user",
+   "to": "pay",
+   "text": "patientId, prix"
+  },
+  {
+   "t": "self",
+   "p": "pay",
+   "text": "son RDV, CONFIRMED, pas déjà payé ?"
+  },
+  {
+   "t": "msg",
+   "from": "pay",
+   "to": "user",
+   "text": "débite le solde du patient"
+  },
+  {
+   "t": "alt",
+   "from": "pat",
+   "to": "notif",
+   "ops": [
+    [
+     "solde suffisant",
+     [
+      {
+       "t": "ret",
+       "from": "user",
+       "to": "pay",
+       "text": "solde débité"
+      },
+      {
+       "t": "self",
+       "p": "pay",
+       "text": "enregistre Payment (COMPLETED)"
+      },
+      {
+       "t": "msg",
+       "from": "pay",
+       "to": "notif",
+       "text": "notifie le patient et le psy"
+      },
+      {
+       "t": "ret",
+       "from": "pay",
+       "to": "pat",
+       "text": "paiement confirmé"
+      }
+     ]
+    ],
+    [
+     "solde insuffisant",
+     [
+      {
+       "t": "ret",
+       "from": "user",
+       "to": "pay",
+       "text": "erreur : solde insuffisant"
+      },
+      {
+       "t": "ret",
+       "from": "pay",
+       "to": "pat",
+       "text": "« Solde insuffisant »"
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "note",
+   "from": "gw",
+   "to": "user",
+   "text": "Si l'enregistrement du paiement échoue après le débit, payment-service recrédite le solde (compensation)."
+  }
+ ]
+}

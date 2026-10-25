@@ -1,0 +1,54 @@
+{
+ "actor": "Psychologue",
+ "note": "Les notes cliniques ne sont visibles que par le psychologue qui les a rédigées.\nToutes ces fonctionnalités exigent d'être connecté.",
+ "groups": [
+  {
+   "title": "Suivi des patients",
+   "items": [
+    "Consulter le dossier d'un patient\n(antécédents, consultations)",
+    {
+     "label": "Rédiger des notes cliniques privées",
+     "actor": false
+    },
+    {
+     "label": "Envoyer un questionnaire\nPHQ-9 / GAD-7",
+     "actor": false
+    },
+    "Ajouter ou retirer un patient\nde son suivi",
+    "Consulter les résultats\naux questionnaires"
+   ]
+  },
+  {
+   "title": "Activité et revenus",
+   "items": [
+    "Consulter son activité\net ses revenus",
+    "Consulter les paiements reçus",
+    "Retirer ses gains"
+   ]
+  },
+  {
+   "title": "Communication",
+   "items": [
+    "Échanger des messages\navec ses patients",
+    "Recevoir des notifications\net des annonces",
+    "Contacter l'administrateur"
+   ]
+  }
+ ],
+ "width": 860,
+ "shift": -160,
+ "relations": [
+  [
+   "Rédiger des notes cliniques privées",
+   "Consulter le dossier d'un patient\n(antécédents, consultations)",
+   "extend",
+   70
+  ],
+  [
+   "Envoyer un questionnaire\nPHQ-9 / GAD-7",
+   "Consulter le dossier d'un patient\n(antécédents, consultations)",
+   "extend",
+   190
+  ]
+ ]
+}

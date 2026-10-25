@@ -1,0 +1,190 @@
+{
+ "lanes": [
+  "Patient",
+  "Psychologue (cabinet)"
+ ],
+ "row": 165,
+ "nodes": [
+  {
+   "id": "s",
+   "type": "bstart",
+   "lane": 0,
+   "row": 0,
+   "text": "Besoin d'aide ressenti"
+  },
+  {
+   "id": "t1",
+   "type": "action",
+   "lane": 0,
+   "row": 1,
+   "text": "Chercher un psychologue (bouche-à-oreille, recommandation)"
+  },
+  {
+   "id": "g1",
+   "type": "gateway",
+   "lane": 0,
+   "row": 2.1,
+   "text": "Psychologue trouvé ?",
+   "tside": "right"
+  },
+  {
+   "id": "t2",
+   "type": "action",
+   "lane": 0,
+   "row": 3.2,
+   "text": "Appeler le cabinet"
+  },
+  {
+   "id": "t3",
+   "type": "action",
+   "lane": 1,
+   "row": 3.2,
+   "text": "Consulter l'agenda papier"
+  },
+  {
+   "id": "g2",
+   "type": "gateway",
+   "lane": 1,
+   "row": 4.3,
+   "text": "Créneau libre ?",
+   "tside": "right"
+  },
+  {
+   "id": "t4",
+   "type": "action",
+   "lane": 0,
+   "row": 4.3,
+   "text": "Rappeler plus tard"
+  },
+  {
+   "id": "t5",
+   "type": "action",
+   "lane": 1,
+   "row": 5.4,
+   "text": "Noter le rendez-vous (sans confirmation écrite)"
+  },
+  {
+   "id": "t6",
+   "type": "action",
+   "lane": 0,
+   "row": 6.5,
+   "text": "Se déplacer au cabinet"
+  },
+  {
+   "id": "t7",
+   "type": "action",
+   "lane": 1,
+   "row": 7.6,
+   "text": "Mener la consultation en présentiel"
+  },
+  {
+   "id": "t8",
+   "type": "action",
+   "lane": 0,
+   "row": 8.7,
+   "text": "Payer en espèces"
+  },
+  {
+   "id": "t9",
+   "type": "action",
+   "lane": 1,
+   "row": 8.7,
+   "text": "Encaisser (sans reçu)"
+  },
+  {
+   "id": "e1",
+   "type": "bend",
+   "lane": 1,
+   "row": 9.9,
+   "text": "Séance terminée, aucun suivi entre les séances"
+  },
+  {
+   "id": "e0",
+   "type": "bend",
+   "lane": 0,
+   "row": 2.1,
+   "dx": -290,
+   "text": "Démarche abandonnée",
+   "tpos": "below"
+  }
+ ],
+ "edges": [
+  {
+   "from": "s",
+   "to": "t1"
+  },
+  {
+   "from": "t1",
+   "to": "g1"
+  },
+  {
+   "from": "g1",
+   "to": "e0",
+   "label": "non",
+   "out": "left",
+   "in": "right",
+   "path": []
+  },
+  {
+   "from": "g1",
+   "to": "t2",
+   "label": "oui"
+  },
+  {
+   "from": "t2",
+   "to": "t3",
+   "out": "right",
+   "in": "left",
+   "path": []
+  },
+  {
+   "from": "t3",
+   "to": "g2"
+  },
+  {
+   "from": "g2",
+   "to": "t4",
+   "label": "non",
+   "out": "left",
+   "in": "right",
+   "path": []
+  },
+  {
+   "from": "t4",
+   "to": "t2",
+   "out": "top",
+   "in": "bottom",
+   "path": []
+  },
+  {
+   "from": "g2",
+   "to": "t5",
+   "label": "oui"
+  },
+  {
+   "from": "t5",
+   "to": "t6"
+  },
+  {
+   "from": "t6",
+   "to": "t7"
+  },
+  {
+   "from": "t7",
+   "to": "t8",
+   "out": "bottom",
+   "in": "top"
+  },
+  {
+   "from": "t8",
+   "to": "t9",
+   "out": "right",
+   "in": "left",
+   "path": []
+  },
+  {
+   "from": "t9",
+   "to": "e1"
+  }
+ ]
+}

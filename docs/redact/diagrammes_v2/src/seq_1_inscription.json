@@ -1,0 +1,126 @@
+{
+ "participants": [
+  {
+   "id": "app",
+   "label": "Application",
+   "sub": "mobile (patient)"
+  },
+  {
+   "id": "gw",
+   "label": "API Gateway",
+   "sub": "routage"
+  },
+  {
+   "id": "auth",
+   "label": "auth-service"
+  },
+  {
+   "id": "user",
+   "label": "user-service"
+  }
+ ],
+ "steps": [
+  {
+   "t": "msg",
+   "from": "app",
+   "to": "gw",
+   "text": "POST /auth/register/patient (email, mot de passe, pseudo)"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "auth",
+   "text": "transmet la requête"
+  },
+  {
+   "t": "self",
+   "p": "auth",
+   "text": "vérifie que l'email et le pseudo sont libres"
+  },
+  {
+   "t": "self",
+   "p": "auth",
+   "text": "hache le mot de passe (BCrypt) et enregistre User (rôle PATIENT)"
+  },
+  {
+   "t": "ret",
+   "from": "auth",
+   "to": "app",
+   "text": "« Inscription réussie »"
+  },
+  {
+   "t": "msg",
+   "from": "app",
+   "to": "gw",
+   "text": "POST /auth/login (email, mot de passe)"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "auth",
+   "text": "transmet la requête"
+  },
+  {
+   "t": "ret",
+   "from": "auth",
+   "to": "app",
+   "text": "jeton JWT + authUserId"
+  },
+  {
+   "t": "self",
+   "p": "app",
+   "text": "stocke le jeton (stockage sécurisé)"
+  },
+  {
+   "t": "msg",
+   "from": "app",
+   "to": "gw",
+   "text": "POST /users + JWT (nom, prénom, téléphone, ville)"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "user",
+   "text": "transmet la requête"
+  },
+  {
+   "t": "self",
+   "p": "user",
+   "text": "vérifie le JWT puis crée UserProfile"
+  },
+  {
+   "t": "ret",
+   "from": "user",
+   "to": "app",
+   "text": "userProfileId"
+  },
+  {
+   "t": "msg",
+   "from": "app",
+   "to": "gw",
+   "text": "POST /patients + JWT (userProfileId, langue)"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "user",
+   "text": "transmet la requête"
+  },
+  {
+   "t": "self",
+   "p": "user",
+   "text": "crée PatientProfile (solde à 0)"
+  },
+  {
+   "t": "ret",
+   "from": "user",
+   "to": "app",
+   "text": "patientProfileId"
+  },
+  {
+   "t": "self",
+   "p": "app",
+   "text": "enregistre les identifiants du profil"
+  }
+ ]
+}

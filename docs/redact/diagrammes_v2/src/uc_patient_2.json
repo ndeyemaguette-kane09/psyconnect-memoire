@@ -1,0 +1,44 @@
+{
+ "actor": "Patient",
+ "note": "Toutes ces fonctionnalités exigent d'être connecté.\nLe contenu des échanges avec Xalaat n'est jamais conservé.",
+ "groups": [
+  {
+   "title": "Paiement et solde",
+   "items": [
+    "Payer un rendez-vous\n(depuis son solde PsyConnect)",
+    "Recharger son solde\n(Wave, Orange Money)",
+    "Retirer son solde",
+    "Consulter l'historique des mouvements"
+   ]
+  },
+  {
+   "title": "Suivi personnel",
+   "items": [
+    "Tenir un journal privé",
+    "Répondre à un questionnaire\nPHQ-9 / GAD-7 de son psychologue",
+    "Consulter ses résultats\naux questionnaires",
+    "Suivre les recommandations\nreçues après une séance",
+    "Discuter avec le compagnon IA Xalaat"
+   ]
+  },
+  {
+   "title": "Communication",
+   "items": [
+    "Échanger des messages\navec son psychologue",
+    "Recevoir des notifications\net des annonces",
+    "Contacter l'administrateur",
+    "Signaler un psychologue"
+   ]
+  }
+ ],
+ "width": 860,
+ "shift": -160,
+ "relations": [
+  [
+   "Recharger son solde\n(Wave, Orange Money)",
+   "Payer un rendez-vous\n(depuis son solde PsyConnect)",
+   "extend",
+   70
+  ]
+ ]
+}

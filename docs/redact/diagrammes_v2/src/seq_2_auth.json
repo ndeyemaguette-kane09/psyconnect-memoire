@@ -1,0 +1,137 @@
+{
+ "participants": [
+  {
+   "id": "app",
+   "label": "Application",
+   "sub": "mobile"
+  },
+  {
+   "id": "gw",
+   "label": "API Gateway",
+   "sub": "routage"
+  },
+  {
+   "id": "auth",
+   "label": "auth-service"
+  },
+  {
+   "id": "user",
+   "label": "user-service"
+  }
+ ],
+ "steps": [
+  {
+   "t": "msg",
+   "from": "app",
+   "to": "gw",
+   "text": "POST /auth/login (email, mot de passe)"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "auth",
+   "text": "transmet la requête"
+  },
+  {
+   "t": "self",
+   "p": "auth",
+   "text": "recherche l'utilisateur par email"
+  },
+  {
+   "t": "alt",
+   "from": "app",
+   "to": "auth",
+   "ops": [
+    [
+     "compte désactivé par l'admin",
+     [
+      {
+       "t": "ret",
+       "from": "auth",
+       "to": "app",
+       "text": "403 « Compte suspendu »"
+      }
+     ]
+    ],
+    [
+     "mot de passe incorrect",
+     [
+      {
+       "t": "ret",
+       "from": "auth",
+       "to": "app",
+       "text": "400 « Mot de passe incorrect »"
+      }
+     ]
+    ],
+    [
+     "identifiants valides",
+     [
+      {
+       "t": "self",
+       "p": "auth",
+       "text": "génère un JWT signé (email, rôle, id), valable 24 h"
+      },
+      {
+       "t": "ret",
+       "from": "auth",
+       "to": "app",
+       "text": "jeton JWT, rôle, authUserId"
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "self",
+   "p": "app",
+   "text": "stocke le jeton (stockage sécurisé)"
+  },
+  {
+   "t": "msg",
+   "from": "app",
+   "to": "gw",
+   "text": "GET /users/by-auth-user/{authUserId} + JWT"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "user",
+   "text": "transmet la requête (le jeton n'est pas vérifié par la passerelle)"
+  },
+  {
+   "t": "self",
+   "p": "user",
+   "text": "vérifie la signature et la validité du JWT"
+  },
+  {
+   "t": "ret",
+   "from": "user",
+   "to": "app",
+   "text": "userProfileId"
+  },
+  {
+   "t": "msg",
+   "from": "app",
+   "to": "gw",
+   "text": "GET /patients/by-auth-user/{authUserId} + JWT"
+  },
+  {
+   "t": "msg",
+   "from": "gw",
+   "to": "user",
+   "text": "transmet la requête (le jeton n'est pas vérifié par la passerelle)"
+  },
+  {
+   "t": "self",
+   "p": "user",
+   "text": "vérifie la signature et la validité du JWT"
+  },
+  {
+   "t": "ret",
+   "from": "user",
+   "to": "app",
+   "text": "patientProfileId (ou psychologistProfileId)"
+  }
+ ]
+}

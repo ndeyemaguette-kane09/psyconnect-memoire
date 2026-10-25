@@ -1,0 +1,145 @@
+{
+ "nodesep": 0.4,
+ "ranksep": 0.55,
+ "free": [
+  {
+   "name": "Appointment",
+   "service": "appointment-service",
+   "stub": "attributs omis"
+  },
+  {
+   "name": "PatientProfile",
+   "service": "user-service",
+   "stub": "attributs omis"
+  },
+  {
+   "name": "PsychologistProfile",
+   "service": "user-service",
+   "stub": "attributs omis"
+  },
+  {
+   "name": "Payment",
+   "service": "payment-service",
+   "attrs": [
+    "- id : Long",
+    "- appointmentId : Long",
+    "- patientId : Long",
+    "- psychologistId : Long",
+    "- amount : BigDecimal",
+    "- method : PaymentMethod",
+    "- status : PaymentStatus",
+    "- transactionReference : String",
+    "- appointmentStartTime : LocalDateTime",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "PlatformSettings",
+   "service": "payment-service",
+   "attrs": [
+    "- id : Long",
+    "- commissionRatePercent : BigDecimal"
+   ]
+  },
+  {
+   "name": "PsychologistWithdrawal",
+   "service": "payment-service",
+   "attrs": [
+    "- id : Long",
+    "- psychologistId : Long",
+    "- amount : BigDecimal",
+    "- method : String",
+    "- status : String",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "Notification",
+   "service": "notification-service",
+   "attrs": [
+    "- id : Long",
+    "- userId : Long",
+    "- userRole : String",
+    "- title : String",
+    "- message : String",
+    "- type : NotificationType",
+    "- isRead : Boolean",
+    "- createdAt : LocalDateTime"
+   ]
+  }
+ ],
+ "edges": [
+  [
+   "Appointment",
+   "Payment",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PatientProfile",
+   "Payment",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistProfile",
+   "Payment",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistProfile",
+   "PsychologistWithdrawal",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PatientProfile",
+   "Notification",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistProfile",
+   "Notification",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "Payment",
+   "PlatformSettings",
+   "use"
+  ],
+  [
+   "PsychologistWithdrawal",
+   "Notification",
+   "invis"
+  ]
+ ],
+ "legend": [
+  "Trait pointillé avec flèche : référence par identifiant vers une autre base de données.",
+  "PlatformSettings ne contient qu'une ligne : le taux de commission appliqué aux paiements.",
+  "Notification.userId désigne le profil du destinataire (patient ou psychologue)."
+ ],
+ "ranks": [
+  [
+   "Appointment",
+   "PatientProfile",
+   "PsychologistProfile"
+  ],
+  [
+   "Payment",
+   "PsychologistWithdrawal"
+  ],
+  [
+   "PlatformSettings",
+   "Notification"
+  ]
+ ]
+}

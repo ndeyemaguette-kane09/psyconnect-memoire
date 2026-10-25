@@ -1,0 +1,185 @@
+{
+ "nodesep": 0.35,
+ "ranksep": 0.55,
+ "free": [
+  {
+   "name": "PatientProfile",
+   "service": "user-service",
+   "stub": "attributs omis"
+  },
+  {
+   "name": "PsychologistProfile",
+   "service": "user-service",
+   "stub": "attributs omis"
+  },
+  {
+   "name": "Appointment",
+   "service": "appointment-service",
+   "attrs": [
+    "- id : Long",
+    "- patientId : Long",
+    "- psychologistId : Long",
+    "- startTime : LocalDateTime",
+    "- endTime : LocalDateTime",
+    "- status : AppointmentStatus",
+    "- consultationType : ConsultationType",
+    "- notes : String",
+    "- meetingLink : String",
+    "- reminderSent : Boolean",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "Questionnaire",
+   "service": "appointment-service",
+   "attrs": [
+    "- id : Long",
+    "- type : QuestionnaireType",
+    "- status : QuestionnaireStatus",
+    "- patientId : Long",
+    "- psychologistId : Long",
+    "- appointmentId : Long",
+    "- answers : String",
+    "- score : Integer",
+    "- sentAt : LocalDateTime",
+    "- completedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "SessionRecommendation",
+   "service": "appointment-service",
+   "attrs": [
+    "- id : Long",
+    "- appointmentId : Long",
+    "- patientId : Long",
+    "- psychologistId : Long",
+    "- content : String",
+    "- completed : boolean",
+    "- createdAt : LocalDateTime",
+    "- updatedAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "Session",
+   "service": "session-service",
+   "attrs": [
+    "- id : Long",
+    "- appointmentId : Long",
+    "- status : SessionStatus",
+    "- meetingToken : String",
+    "- emergencyMode : Boolean",
+    "- emergencyPatientId : Long",
+    "- emergencyPsychologistId : Long",
+    "- startedAt : LocalDateTime",
+    "- endedAt : LocalDateTime",
+    "- createdAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "Conversation",
+   "service": "appointment-service",
+   "attrs": [
+    "- id : Long",
+    "- patientId : Long",
+    "- psychologistId : Long",
+    "- createdAt : LocalDateTime",
+    "- lastMessageAt : LocalDateTime"
+   ]
+  },
+  {
+   "name": "Message",
+   "service": "appointment-service",
+   "attrs": [
+    "- id : Long",
+    "- conversationId : Long",
+    "- senderAuthUserId : Long",
+    "- content : String",
+    "- sentAt : LocalDateTime",
+    "- readAt : LocalDateTime"
+   ]
+  }
+ ],
+ "edges": [
+  [
+   "PatientProfile",
+   "Appointment",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistProfile",
+   "Appointment",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PatientProfile",
+   "Conversation",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "PsychologistProfile",
+   "Conversation",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "Appointment",
+   "Questionnaire",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "Appointment",
+   "SessionRecommendation",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "Appointment",
+   "Session",
+   "refback",
+   "1",
+   "0..*"
+  ],
+  [
+   "Conversation",
+   "Message",
+   "refback",
+   "1",
+   "0..*"
+  ]
+ ],
+ "ranks": [
+  [
+   "PatientProfile",
+   "PsychologistProfile"
+  ],
+  [
+   "Appointment",
+   "Conversation"
+  ],
+  [
+   "Questionnaire",
+   "SessionRecommendation",
+   "Session",
+   "Message"
+  ]
+ ],
+ "legend": [
+  "Trait pointillé avec flèche : référence par identifiant,",
+  "la flèche pointe vers la classe référencée.",
+  "patientId et psychologistId désignent PatientProfile et",
+  "PsychologistProfile (user-service). Pour un appel d'urgence,",
+  "Session.appointmentId est vide (emergencyMode = true)."
+ ],
+ "rankdir": "LR",
+ "splines": "spline"
+}

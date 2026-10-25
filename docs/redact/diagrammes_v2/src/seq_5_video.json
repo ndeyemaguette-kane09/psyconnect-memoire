@@ -1,0 +1,165 @@
+{
+ "participants": [
+  {
+   "id": "pat",
+   "label": "App patient"
+  },
+  {
+   "id": "psy",
+   "label": "App psy"
+  },
+  {
+   "id": "sess",
+   "label": "session-",
+   "sub": "service"
+  },
+  {
+   "id": "appt",
+   "label": "appointment-",
+   "sub": "service"
+  },
+  {
+   "id": "pay",
+   "label": "payment-",
+   "sub": "service"
+  },
+  {
+   "id": "notif",
+   "label": "notification-",
+   "sub": "service"
+  },
+  {
+   "id": "jitsi",
+   "label": "Jitsi Meet",
+   "sub": "(externe)"
+  }
+ ],
+ "steps": [
+  {
+   "t": "note",
+   "from": "pat",
+   "to": "pay",
+   "text": "Les appels de l'application passent par l'API Gateway, omise ici pour la lisibilité."
+  },
+  {
+   "t": "msg",
+   "from": "pat",
+   "to": "sess",
+   "text": "POST /sessions/start (appointmentId)"
+  },
+  {
+   "t": "msg",
+   "from": "sess",
+   "to": "appt",
+   "text": "lit le rendez-vous"
+  },
+  {
+   "t": "ret",
+   "from": "appt",
+   "to": "sess",
+   "text": "RDV"
+  },
+  {
+   "t": "self",
+   "p": "sess",
+   "text": "participant du RDV ? (verrou) session en cours ?"
+  },
+  {
+   "t": "alt",
+   "from": "pat",
+   "to": "appt",
+   "ops": [
+    [
+     "aucune session en cours",
+     [
+      {
+       "t": "self",
+       "p": "sess",
+       "text": "RDV CONFIRMED, de −10 min à +30 min ?"
+      },
+      {
+       "t": "msg",
+       "from": "sess",
+       "to": "pay",
+       "text": "le RDV est-il payé ?"
+      },
+      {
+       "t": "ret",
+       "from": "pay",
+       "to": "sess",
+       "text": "oui"
+      },
+      {
+       "t": "self",
+       "p": "sess",
+       "text": "crée Session et un salon unique"
+      }
+     ]
+    ],
+    [
+     "session déjà en cours",
+     [
+      {
+       "t": "self",
+       "p": "sess",
+       "text": "renvoie la session existante"
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "ret",
+   "from": "sess",
+   "to": "pat",
+   "text": "nom du salon"
+  },
+  {
+   "t": "msg",
+   "from": "pat",
+   "to": "jitsi",
+   "text": "rejoint le salon"
+  },
+  {
+   "t": "msg",
+   "from": "psy",
+   "to": "sess",
+   "text": "POST /sessions/start (même RDV)"
+  },
+  {
+   "t": "ret",
+   "from": "sess",
+   "to": "psy",
+   "text": "même nom de salon"
+  },
+  {
+   "t": "msg",
+   "from": "psy",
+   "to": "jitsi",
+   "text": "rejoint le même salon"
+  },
+  {
+   "t": "note",
+   "from": "pat",
+   "to": "jitsi",
+   "text": "Consultation vidéo : patient et psychologue sont dans le même salon. Quitter l'appel ne ferme pas la session."
+  },
+  {
+   "t": "self",
+   "p": "sess",
+   "text": "toutes les 5 min : créneau dépassé ? clôt la session (COMPLETED)"
+  },
+  {
+   "t": "msg",
+   "from": "sess",
+   "to": "appt",
+   "text": "passe le RDV en COMPLETED"
+  },
+  {
+   "t": "msg",
+   "from": "sess",
+   "to": "notif",
+   "text": "notifie le patient"
+  }
+ ]
+}
