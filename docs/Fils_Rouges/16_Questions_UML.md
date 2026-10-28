@@ -165,20 +165,22 @@ Le canevas ne fixe pas de nombre. On a gardé ceux qu'on sait défendre : 3 cas 
 **« Est-ce que vos diagrammes représentent le temps ? »**
 Oui, là où le temps déclenche quelque chose. En UML, on utilise l'**événement temporel** (le sablier). Dans le diagramme d'activités « Échéances automatiques » (Fig. 3.19), le sablier « Toutes les 5 minutes » montre qu'aucun acteur ne lance l'action : c'est l'écoulement du temps qui la déclenche. En BPMN, l'équivalent est l'**événement minuterie** (une horloge dans un cercle).
 
-**Pourquoi je n'en mets pas partout ?** Une durée n'a sa place dans un diagramme que si elle change le comportement. « Le patient remplit le formulaire en 2 minutes » n'apporte rien. En revanche, « si le psychologue n'a pas confirmé 2 h avant, le rendez-vous est annulé » est une règle métier, donc je la représente.
+**Pourquoi je n'en mets pas partout ?** Une durée n'a sa place dans un diagramme que si elle change le comportement. « Le patient remplit le formulaire en 2 minutes » n'apporte rien. En revanche, « si le psychologue n'a pas confirmé 1 h avant, le rendez-vous est annulé » est une règle métier, donc je la représente.
 
 **Les règles de temps de PsyConnect :**
-- Une réservation se fait **au moins 2 h à l'avance**.
-- Le psychologue peut accepter ou refuser **jusqu'à 2 h avant** la séance. Passé ce délai, la demande est annulée automatiquement, et le patient et le psychologue sont notifiés.
-- Un rendez-vous confirmé mais non payé reçoit **un rappel de paiement** (une seule fois), puis il est annulé **1 h avant le début** et le créneau est libéré.
+- Une réservation se fait **au moins 2 h à l'avance**. Le psychologue garde ainsi au moins 1 h pour répondre. Je n'ai pas voulu un délai plus long : un patient qui cherche une séance le jour même serait perdu.
+- Le psychologue peut accepter ou refuser **jusqu'à 1 h avant** la séance. Passé ce délai, la demande est annulée automatiquement, et le patient et le psychologue sont notifiés.
+- Un rendez-vous confirmé mais non payé reçoit **un rappel de paiement** (une seule fois) quand il reste moins d'1 h, puis il est annulé **30 min avant le début** et le créneau est libéré.
 - Le patient qui annule **plus de 48 h avant** la séance est remboursé sur son portefeuille. En dessous de 48 h, il n'est pas remboursé. Dans les deux cas, le psychologue est notifié.
-- On ne peut rejoindre la vidéo que si le rendez-vous est **confirmé et payé**, de 10 min avant à 30 min après le début. La session est fermée 30 min après la fin du créneau.
+- On ne peut rejoindre la vidéo que si le rendez-vous est **confirmé et payé**, de 10 min avant le début à 30 min après la fin. La session est fermée 30 min après la fin du créneau.
 
-**« Pourquoi toutes les 5 minutes et pas en temps réel ? »** C'est un compromis : la vérification est légère, et 5 minutes de décalage sur une échéance de 1 h ou 2 h n'ont aucun impact pour l'utilisateur. Un déclenchement exact à la seconde demanderait de programmer une tâche par rendez-vous, ce qui est plus fragile.
+**« Pourquoi toutes les 5 minutes et pas en temps réel ? »** C'est un compromis : la vérification est légère, et 5 minutes de décalage sur une échéance de 30 min ou 1 h restent acceptables pour l'utilisateur. Un déclenchement exact à la seconde demanderait de programmer une tâche par rendez-vous, ce qui est plus fragile.
 
 **« Ces règles corrigent quoi ? »** Avant, une demande sans réponse du psychologue ou un rendez-vous jamais payé restait bloqué indéfiniment et occupait le créneau. Maintenant, chaque rendez-vous a toujours une issue.
 
-**« Pourquoi “le psy ne répond pas” n'est pas une troisième branche du losange ? »** Un nœud de décision choisit entre des réponses données : accepter ou refuser. Ne rien faire n'est pas une réponse, c'est une absence d'action. En UML, on la représente par un événement temporel, le sablier, qui se déclenche à l'échéance (2 h avant la séance pour une demande en attente, 1 h avant pour un rendez-vous non payé). Le sablier n'a pas de flèche entrante parce qu'il est actif dès que le processus commence : il « surveille » en parallèle. Cela couvre aussi le patient dont le solde est insuffisant et qui ne recharge jamais.
+**« Pourquoi “le psy ne répond pas” n'est pas une troisième branche du losange ? »** Un nœud de décision choisit entre des réponses données : accepter ou refuser. Ne rien faire n'est pas une réponse, c'est une absence d'action. En UML, on la représente par un événement temporel, le sablier, qui se déclenche à l'échéance (1 h avant la séance pour une demande en attente, 30 min avant pour un rendez-vous non payé). Le sablier n'a pas de flèche entrante parce qu'il est actif dès que le processus commence : il « surveille » en parallèle. Cela couvre aussi le patient dont le solde est insuffisant et qui ne recharge jamais.
+
+**« Comment sont représentés les délais dans le diagramme de réservation ? »** Par des **régions interruptibles** (cadres en pointillés). La première entoure l'attente de la réponse du psychologue ; à l'intérieur, un événement temporel (sablier) « 1 h avant la séance ». S'il se déclenche, il interrompt la région par une flèche en éclair et la demande est annulée. La seconde entoure l'attente du paiement, avec le sablier « 30 min avant la séance, non payé ». Le sablier est rattaché à la partie du processus qu'il surveille, au lieu de flotter seul.
 
 ---
 
